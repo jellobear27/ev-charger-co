@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BenefitCard from '@/components/BenefitCard'
+import Image from 'next/image'
 
 export default function Home() {
   const benefits = [
@@ -52,10 +53,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white/90 backdrop-blur-md shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold text-green-600">EV-CALI</span>
+            <span className="text-2xl font-bold text-green-600">EV Charge Partner</span>
             <div className="space-x-4">
               <Link href="/" className="text-gray-700 hover:text-green-600">Home</Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600">About</Link>
@@ -65,21 +66,89 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-6">
-          Get Paid to Host an
-          <span className="text-green-600 block">EV Charger</span>
-        </h1>
-        <p className="text-2xl text-gray-600 mb-8">
-          Earn passive income and bring more traffic to your business. 
-          No cost to you - we handle everything.
-        </p>
-        <Link href="/apply">
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
-            Apply to Host a Station
-          </button>
-        </Link>
+      {/* Hero Section with Image */}
+      <div className="relative min-h-screen flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/evcharge.jpeg"
+            alt="EV chargers in a warm-lit California parking lot"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-white">
+              <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                Become an EV Charge Partner
+                <span className="text-green-400 block">Earn 10% Commission</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-white mb-8 leading-relaxed font-medium drop-shadow-lg">
+                Transform your parking lot into a revenue-generating EV charging destination. 
+                Join the clean energy revolution while earning passive income.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/apply">
+                  <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+                    Apply to Host a Station
+                  </button>
+                </Link>
+                <Link href="/about">
+                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 border border-white/30">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Stats Card */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Why California Businesses Choose Us</h3>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">$0</div>
+                    <div className="text-gray-200">Installation Cost</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">2-4 Weeks</div>
+                    <div className="text-gray-200">Setup Time</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">10%</div>
+                    <div className="text-gray-200">Commission Rate</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Benefits Section */}
@@ -87,10 +156,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Host an EV Charger?
+              Why Become an EV Charge Partner?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join hundreds of businesses already earning passive income while supporting clean energy
+              Join hundreds of California businesses already earning passive income while supporting clean energy
             </p>
           </div>
           
@@ -116,7 +185,7 @@ export default function Home() {
             Ready to Start Earning?
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            Join the clean energy revolution
+            Join the clean energy revolution as an EV Charge Partner
           </p>
           <Link href="/apply">
             <button className="bg-white text-green-600 px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
