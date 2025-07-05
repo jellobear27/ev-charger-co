@@ -7,7 +7,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="sm:col-span-2">
-            <h3 className="text-xl sm:text-2xl font-bold text-green-400 mb-3 sm:mb-4">EV Charge Partner</h3>
+            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
+              <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
+              <img src="/logo.svg" alt="EV Charge Partners" className="hidden sm:block h-10" />
+            </div>
             <p className="text-gray-300 mb-4 max-w-md text-sm sm:text-base">
               Building California&apos;s largest EV charging network by partnering with local businesses. 
               Earn passive income while supporting clean energy.
@@ -89,7 +92,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-              © 2024 EV Charge Partner. All rights reserved.
+              © 2024 EV Charge Partners. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
               <Link href="#" className="text-gray-400 hover:text-green-400 text-xs sm:text-sm transition-colors">

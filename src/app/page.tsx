@@ -27,8 +27,8 @@ export default function Home() {
       delay: 1
     },
     {
-      title: "10% Commission",
-      description: "Earn money from every charge",
+      title: "High Dollar Commissions",
+      description: "Earn substantial money from every charge",
       icon: (
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
@@ -56,7 +56,16 @@ export default function Home() {
       <nav className="bg-white/90 backdrop-blur-md shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <span className="text-xl sm:text-2xl font-bold text-green-600">EV Charge Partner</span>
+            <div className="flex items-center space-x-3">
+              <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
+              <div className="hidden sm:flex items-center space-x-3">
+                <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
+                <div className="text-left">
+                  <div className="text-lg font-bold text-gray-900 font-montserrat">EV CHARGE PARTNERS</div>
+                  <div className="text-sm text-gray-600 font-poppins">of California</div>
+                </div>
+              </div>
+            </div>
             <div className="hidden sm:flex space-x-4">
               <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
@@ -73,7 +82,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Image */}
-      <div className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center animate-on-scroll">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -92,22 +101,22 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="text-white text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-                Become an EV Charge Partner
-                <span className="text-green-400 block">Earn 10% Commission</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight font-montserrat">
+                Join EV Charge Partners
+                <span className="text-green-400 block font-poppins">of California</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg">
+              <p className="text-lg sm:text-xl lg:text-2xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg font-montserrat">
                 Transform your parking lot into a revenue-generating EV charging destination. 
-                Join the clean energy revolution while earning passive income.
+                Join the clean energy revolution while earning <span className="text-green-400 font-bold font-poppins">HIGH DOLLAR COMMISSIONS</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/apply">
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+                  <button className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button">
                     Apply to Host a Station
                   </button>
                 </Link>
                 <Link href="/about">
-                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 border border-white/30">
+                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold border border-white/30 font-montserrat bounce-hover elastic-button">
                     Learn More
                   </button>
                 </Link>
@@ -116,7 +125,7 @@ export default function Home() {
 
             {/* Stats Card */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left">Why California Businesses Choose Us</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left font-montserrat">Why California Businesses Choose EV Charge Partners</h3>
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -125,8 +134,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold text-white">$0</div>
-                    <div className="text-gray-200 text-sm sm:text-base">Installation Cost</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white font-poppins">$0</div>
+                    <div className="text-gray-200 text-sm sm:text-base font-montserrat">Installation Cost</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3 sm:space-x-4">
@@ -136,8 +145,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold text-white">2-4 Weeks</div>
-                    <div className="text-gray-200 text-sm sm:text-base">Setup Time</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white font-poppins">2-4 Weeks</div>
+                    <div className="text-gray-200 text-sm sm:text-base font-montserrat">Setup Time</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3 sm:space-x-4">
@@ -147,25 +156,25 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold text-white">10%</div>
-                    <div className="text-gray-200 text-sm sm:text-base">Commission Rate</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white font-poppins">High Dollar</div>
+                    <div className="text-gray-200 text-sm sm:text-base font-montserrat">Commissions</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Benefits Section */}
-      <div className="py-12 sm:py-16 lg:py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white animate-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Why Become an EV Charge Partner?
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat">
+              Why Join EV Charge Partners?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Join hundreds of California businesses already earning passive income while supporting clean energy
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 font-poppins">
+              Join hundreds of California businesses already earning high dollar commissions while supporting clean energy
             </p>
           </div>
           
@@ -182,24 +191,24 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20 animate-on-scroll">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-montserrat">
             Ready to Start Earning?
           </h2>
-          <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8">
-            Join the clean energy revolution as an EV Charge Partner
+          <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 font-poppins">
+            Join the clean energy revolution with EV Charge Partners
           </p>
           <Link href="/apply">
-            <button className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+            <button className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button">
               Apply Now - It&apos;s Free
             </button>
           </Link>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

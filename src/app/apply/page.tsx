@@ -36,7 +36,10 @@ export default function Apply() {
       <nav className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <Link href="/" className="text-xl sm:text-2xl font-bold text-green-600">EV Charge Partner</Link>
+            <Link href="/" className="flex items-center space-x-2">
+              <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
+              <img src="/logo.svg" alt="EV Charge Partners" className="hidden sm:block h-10" />
+            </Link>
             <div className="hidden sm:flex space-x-4">
               <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
@@ -55,7 +58,7 @@ export default function Apply() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Apply to Become an EV Charge Partner
+            Apply to Join EV Charge Partners
           </h1>
           <p className="text-lg sm:text-xl text-gray-600">
             Join hundreds of California businesses earning passive income from EV charging

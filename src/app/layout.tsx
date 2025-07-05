@@ -1,26 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
-  title: "EV Charge Partner – Host an EV Station, Earn 10%",
-  description: "Become an EV Charge Partner and earn passive income by hosting a free EV charger at your California business.",
-  keywords: "EV charging, electric vehicle, passive income, business opportunity, California, EV station host, charging partner",
+  title: "EV Charge Partners of California – Host an EV Station, Earn High Dollar Commissions",
+  description: "Join EV Charge Partners of California and earn high dollar commissions by hosting a free EV charger at your business.",
+  keywords: "EV charging, electric vehicle, high dollar commissions, business opportunity, California, EV station host, charging partners",
   openGraph: {
-    title: "EV Charge Partner – Host an EV Station, Earn 10%",
-    description: "Become an EV Charge Partner and earn passive income by hosting a free EV charger at your California business.",
+    title: "EV Charge Partners of California – Host an EV Station, Earn High Dollar Commissions",
+    description: "Join EV Charge Partners of California and earn high dollar commissions by hosting a free EV charger at your business.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EV Charge Partner – Host an EV Station, Earn 10%",
-    description: "Become an EV Charge Partner and earn passive income by hosting a free EV charger at your California business.",
+    title: "EV Charge Partners of California – Host an EV Station, Earn High Dollar Commissions",
+    description: "Join EV Charge Partners of California and earn high dollar commissions by hosting a free EV charger at your business.",
   },
   robots: {
     index: true,
@@ -35,9 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Footer />
+      <body className={`${poppins.variable} ${montserrat.variable} font-sans`}>
+        <PageTransition>
+          {children}
+          <Footer />
+        </PageTransition>
       </body>
     </html>
   );

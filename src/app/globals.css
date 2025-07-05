@@ -2,16 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling and bouncy effects */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.page-transition {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for bouncy feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #16a34a, #22c55e);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #15803d, #16a34a);
+  transform: scaleY(1.2);
+}
+
+/* Bouncy animations for interactive elements */
+.bounce-hover {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+}
+
+.bounce-hover:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
+}
+
+/* Fluid page transitions */
+.page-transition {
+  min-height: 100vh;
+  transform-origin: center;
+}
+
+/* Smooth section animations */
+.animate-on-scroll {
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+/* Enhanced bouncy effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Elastic button effects */
+.elastic-button {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.elastic-button:active {
+  transform: scale(0.95);
+}
+
+/* Smooth section transitions */
+.animate-on-scroll {
+  will-change: transform, opacity;
+}
+
+/* Custom easing for bouncy animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-100px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+  }
+  70% {
+    transform: scale(0.9) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
