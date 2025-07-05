@@ -54,13 +54,19 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-md shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold text-green-600">EV Charge Partner</span>
-            <div className="space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-green-600">Home</Link>
-              <Link href="/about" className="text-gray-700 hover:text-green-600">About</Link>
-              <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg">Apply Now</Link>
+            <span className="text-xl sm:text-2xl font-bold text-green-600">EV Charge Partner</span>
+            <div className="hidden sm:flex space-x-4">
+              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
+              <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
+              <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
+            </div>
+            {/* Mobile menu button */}
+            <div className="sm:hidden">
+              <Link href="/apply" className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">
+                Apply
+              </Link>
             </div>
           </div>
         </div>
@@ -82,26 +88,26 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
-            <div className="text-white">
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            <div className="text-white text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
                 Become an EV Charge Partner
                 <span className="text-green-400 block">Earn 10% Commission</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-white mb-8 leading-relaxed font-medium drop-shadow-lg">
+              <p className="text-lg sm:text-xl lg:text-2xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg">
                 Transform your parking lot into a revenue-generating EV charging destination. 
                 Join the clean energy revolution while earning passive income.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/apply">
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+                  <button className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
                     Apply to Host a Station
                   </button>
                 </Link>
                 <Link href="/about">
-                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 border border-white/30">
+                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 border border-white/30">
                     Learn More
                   </button>
                 </Link>
@@ -109,40 +115,40 @@ export default function Home() {
             </div>
 
             {/* Stats Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Why California Businesses Choose Us</h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left">Why California Businesses Choose Us</h3>
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">$0</div>
-                    <div className="text-gray-200">Installation Cost</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white">$0</div>
+                    <div className="text-gray-200 text-sm sm:text-base">Installation Cost</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">2-4 Weeks</div>
-                    <div className="text-gray-200">Setup Time</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white">2-4 Weeks</div>
+                    <div className="text-gray-200 text-sm sm:text-base">Setup Time</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">10%</div>
-                    <div className="text-gray-200">Commission Rate</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white">10%</div>
+                    <div className="text-gray-200 text-sm sm:text-base">Commission Rate</div>
                   </div>
                 </div>
               </div>
@@ -152,18 +158,18 @@ export default function Home() {
       </div>
 
       {/* Benefits Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <div className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Why Become an EV Charge Partner?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Join hundreds of California businesses already earning passive income while supporting clean energy
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <BenefitCard
                 key={index}
@@ -179,16 +185,16 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 py-20">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl font-bold text-white mb-4">
+      <div className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Start Earning?
           </h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8">
             Join the clean energy revolution as an EV Charge Partner
           </p>
           <Link href="/apply">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+            <button className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
               Apply Now - It&apos;s Free
             </button>
           </Link>
