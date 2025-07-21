@@ -52,56 +52,58 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-md shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-              <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
-              <div className="hidden sm:flex items-center space-x-3">
-                <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
-                <div className="text-left">
-                  <div className="text-lg font-bold text-gray-900 font-montserrat">EV CHARGE PARTNERS</div>
-                  <div className="text-sm text-gray-600 font-poppins">of California</div>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 sm:p-6 lg:p-8">
+      {/* Main Content Container with Rounded Edges */}
+      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+        {/* Scrolling Banner */}
+        <ScrollingBanner />
+
+        {/* Hero Section with Image */}
+        <section className="relative min-h-screen flex items-center">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/evcharge.jpeg"
+              alt="EV chargers in a warm-lit California parking lot"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+
+          {/* Navigation - Now overlaying the image */}
+          <nav className="absolute top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-3">
+                  <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
+                  <div className="hidden sm:flex items-center space-x-3">
+                    <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
+                    <div className="text-left">
+                      <div className="text-lg font-bold text-white font-montserrat">EV CHARGE PARTNERS</div>
+                      <div className="text-sm text-gray-200 font-poppins">of California</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden sm:flex space-x-4">
+                  <Link href="/" className="text-white hover:text-green-400 transition-colors">Home</Link>
+                  <Link href="/about" className="text-white hover:text-green-400 transition-colors">About</Link>
+                  <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
+                </div>
+                {/* Mobile menu button */}
+                <div className="sm:hidden">
+                  <Link href="/apply" className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">
+                    Apply
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="hidden sm:flex space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
-              <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
-              <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
-            </div>
-            {/* Mobile menu button */}
-            <div className="sm:hidden">
-              <Link href="/apply" className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">
-                Apply
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+          </nav>
 
-      {/* Scrolling Banner */}
-      <ScrollingBanner />
-
-      {/* Hero Section with Image */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/evcharge.jpeg"
-            alt="EV chargers in a warm-lit California parking lot"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 mt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="text-white text-center lg:text-left">
@@ -167,8 +169,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Benefits Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
@@ -213,6 +214,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      </div>
     </div>
   )
 }
