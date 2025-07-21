@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 /* Smooth scrolling and bouncy effects */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   overflow-x: hidden;
@@ -107,6 +107,24 @@ body {
 
 .bounce-in {
   animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Scrolling banner animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 45s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 :root {

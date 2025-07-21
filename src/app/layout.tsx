@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import PageTransition from "@/components/PageTransition";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,10 +44,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} font-sans`}>
-        <PageTransition>
-          {children}
-          <Footer />
-        </PageTransition>
+        {children}
+        <Footer />
       </body>
     </html>
   );

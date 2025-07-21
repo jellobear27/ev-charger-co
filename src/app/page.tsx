@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BenefitCard from '@/components/BenefitCard'
+import ScrollingBanner from '@/components/ScrollingBanner'
 import Image from 'next/image'
 
 export default function Home() {
@@ -81,8 +82,11 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* Scrolling Banner */}
+      <ScrollingBanner />
+
       {/* Hero Section with Image */}
-      <section className="relative min-h-screen flex items-center animate-on-scroll">
+      <section className="relative min-h-screen flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -167,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white animate-on-scroll">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat">
@@ -194,7 +198,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20 animate-on-scroll">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-montserrat">
             Ready to Start Earning?
