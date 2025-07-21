@@ -128,6 +128,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            </div>
 
             {/* Stats Card */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
