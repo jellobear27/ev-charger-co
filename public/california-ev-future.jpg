@@ -1,0 +1,45 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#fdf2f8"/>
+  <rect x="50" y="100" width="700" height="200" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  
+  <!-- Futuristic city skyline -->
+  <rect x="100" y="200" width="40" height="60" fill="#8b5cf6" opacity="0.8"/>
+  <rect x="150" y="180" width="50" height="80" fill="#06b6d4" opacity="0.8"/>
+  <rect x="220" y="160" width="60" height="100" fill="#10b981" opacity="0.8"/>
+  <rect x="300" y="190" width="45" height="70" fill="#f59e0b" opacity="0.8"/>
+  <rect x="365" y="170" width="55" height="90" fill="#ef4444" opacity="0.8"/>
+  <rect x="440" y="200" width="40" height="60" fill="#8b5cf6" opacity="0.8"/>
+  <rect x="500" y="150" width="70" height="110" fill="#06b6d4" opacity="0.8"/>
+  <rect x="590" y="180" width="50" height="80" fill="#10b981" opacity="0.8"/>
+  <rect x="660" y="190" width="40" height="70" fill="#f59e0b" opacity="0.8"/>
+  
+  <!-- EV charging stations -->
+  <circle cx="120" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="175" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="250" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="322" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="387" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="460" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="535" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="615" cy="270" r="8" fill="#16a34a"/>
+  <circle cx="680" cy="270" r="8" fill="#16a34a"/>
+  
+  <!-- Lightning bolts -->
+  <path d="M115 265 L120 270 L117 272 L122 275 L118 278 L113 273 L116 271 L111 268 Z" fill="#ffffff"/>
+  <path d="M170 265 L175 270 L172 272 L177 275 L173 278 L168 273 L171 271 L166 268 Z" fill="#ffffff"/>
+  <path d="M245 265 L250 270 L247 272 L252 275 L248 278 L243 273 L246 271 L241 268 Z" fill="#ffffff"/>
+  <path d="M317 265 L322 270 L319 272 L324 275 L320 278 L315 273 L318 271 L313 268 Z" fill="#ffffff"/>
+  <path d="M382 265 L387 270 L384 272 L389 275 L385 278 L380 273 L383 271 L378 268 Z" fill="#ffffff"/>
+  <path d="M455 265 L460 270 L457 272 L462 275 L458 278 L453 273 L456 271 L451 268 Z" fill="#ffffff"/>
+  <path d="M530 265 L535 270 L532 272 L537 275 L533 278 L528 273 L531 271 L526 268 Z" fill="#ffffff"/>
+  <path d="M610 265 L615 270 L612 272 L617 275 L613 278 L608 273 L611 271 L606 268 Z" fill="#ffffff"/>
+  <path d="M675 265 L680 270 L677 272 L682 275 L678 278 L673 273 L676 271 L671 268 Z" fill="#ffffff"/>
+  
+  <!-- 2024 text -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#be185d">
+    California EV Future 2024
+  </text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">
+    The future of electric vehicle infrastructure
+  </text>
+</svg> 

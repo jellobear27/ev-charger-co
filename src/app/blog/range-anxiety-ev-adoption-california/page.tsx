@@ -65,7 +65,7 @@ export default function RangeAnxietyArticle() {
           {/* Featured Image */}
           <div className="mb-8">
             <Image
-              src="/evcharge.jpeg"
+              src="/ev-infrastructure-california.jpg"
               alt="EV chargers in a California parking lot showing the expanding charging infrastructure"
               width={800}
               height={400}

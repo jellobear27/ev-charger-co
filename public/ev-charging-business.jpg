@@ -1,0 +1,48 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0fdf4"/>
+  <rect x="50" y="100" width="700" height="200" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Shopping center building -->
+  <rect x="150" y="180" width="200" height="80" fill="#22c55e" opacity="0.8"/>
+  <rect x="170" y="200" width="30" height="40" fill="#ffffff" opacity="0.9"/>
+  <rect x="220" y="200" width="30" height="40" fill="#ffffff" opacity="0.9"/>
+  <rect x="270" y="200" width="30" height="40" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Parking lot with EV chargers -->
+  <rect x="400" y="180" width="300" height="80" fill="#64748b" opacity="0.3"/>
+  
+  <!-- EV charging stations -->
+  <rect x="420" y="190" width="20" height="60" fill="#16a34a"/>
+  <rect x="440" y="200" width="8" height="40" fill="#ffffff"/>
+  <rect x="445" y="210" width="2" height="20" fill="#16a34a"/>
+  
+  <rect x="520" y="190" width="20" height="60" fill="#16a34a"/>
+  <rect x="540" y="200" width="8" height="40" fill="#ffffff"/>
+  <rect x="545" y="210" width="2" height="20" fill="#16a34a"/>
+  
+  <rect x="620" y="190" width="20" height="60" fill="#16a34a"/>
+  <rect x="640" y="200" width="8" height="40" fill="#ffffff"/>
+  <rect x="645" y="210" width="2" height="20" fill="#16a34a"/>
+  
+  <!-- Cars -->
+  <rect x="430" y="200" width="25" height="15" fill="#3b82f6" rx="2"/>
+  <rect x="530" y="200" width="25" height="15" fill="#ef4444" rx="2"/>
+  <rect x="630" y="200" width="25" height="15" fill="#f59e0b" rx="2"/>
+  
+  <!-- Lightning bolts -->
+  <path d="M445 205 L450 210 L447 212 L452 215 L448 218 L443 213 L446 211 L441 208 Z" fill="#ffffff"/>
+  <path d="M545 205 L550 210 L547 212 L552 215 L548 218 L543 213 L546 211 L541 208 Z" fill="#ffffff"/>
+  <path d="M645 205 L650 210 L647 212 L652 215 L648 218 L643 213 L646 211 L641 208 Z" fill="#ffffff"/>
+  
+  <!-- Dollar signs -->
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">$</text>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">Revenue</text>
+  
+  <!-- Title -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#15803d">
+    EV Charging Business
+  </text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">
+    Transform your parking lot into a revenue generator
+  </text>
+</svg> 

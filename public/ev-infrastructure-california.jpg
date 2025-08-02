@@ -1,0 +1,31 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0f9ff"/>
+  <rect x="50" y="100" width="700" height="200" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  
+  <!-- California outline -->
+  <path d="M100 150 L150 120 L200 130 L250 140 L300 135 L350 145 L400 140 L450 150 L500 145 L550 155 L600 150 L650 160 L700 155 L720 170 L700 180 L650 175 L600 180 L550 170 L500 175 L450 165 L400 170 L350 160 L300 165 L250 155 L200 160 L150 150 L100 155 Z" fill="#0ea5e9" opacity="0.3"/>
+  
+  <!-- EV charging stations across California -->
+  <circle cx="150" cy="140" r="8" fill="#16a34a"/>
+  <circle cx="250" cy="150" r="8" fill="#16a34a"/>
+  <circle cx="350" cy="145" r="8" fill="#16a34a"/>
+  <circle cx="450" cy="155" r="8" fill="#16a34a"/>
+  <circle cx="550" cy="150" r="8" fill="#16a34a"/>
+  <circle cx="650" cy="160" r="8" fill="#16a34a"/>
+  
+  <!-- Lightning bolts -->
+  <path d="M145 135 L150 140 L147 142 L152 145 L148 148 L143 143 L146 141 L141 138 Z" fill="#ffffff"/>
+  <path d="M245 145 L250 150 L247 152 L252 155 L248 158 L243 153 L246 151 L241 148 Z" fill="#ffffff"/>
+  <path d="M345 140 L350 145 L347 147 L352 150 L348 153 L343 148 L346 146 L341 143 Z" fill="#ffffff"/>
+  <path d="M445 150 L450 155 L447 157 L452 160 L448 163 L443 158 L446 156 L441 153 Z" fill="#ffffff"/>
+  <path d="M545 145 L550 150 L547 152 L552 155 L548 158 L543 153 L546 151 L541 148 Z" fill="#ffffff"/>
+  <path d="M645 155 L650 160 L647 162 L652 165 L648 168 L643 163 L646 161 L641 158 Z" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af">
+    California EV Infrastructure
+  </text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">
+    Expanding charging network across the state
+  </text>
+</svg> 

@@ -15,7 +15,7 @@ const blogPosts = [
     category: "EV Adoption",
     date: "2024-01-15",
     readTime: "5 min read",
-    image: "/evcharge.jpeg",
+    image: "/ev-infrastructure-california.jpg",
     slug: "range-anxiety-ev-adoption-california",
     featured: true
   },
@@ -26,7 +26,7 @@ const blogPosts = [
     category: "Business Opportunity",
     date: "2024-01-22",
     readTime: "7 min read",
-    image: "/evcharge.jpeg",
+    image: "/ev-charging-business.jpg",
     slug: "california-businesses-profiting-ev-charging",
     featured: true
   },
@@ -37,7 +37,7 @@ const blogPosts = [
     category: "Business Guide",
     date: "2024-01-29",
     readTime: "8 min read",
-    image: "/evcharge.jpeg",
+    image: "/ev-charging-guide.jpg",
     slug: "complete-guide-ev-charging-business-owners",
     featured: false
   },
@@ -48,7 +48,7 @@ const blogPosts = [
     category: "Infrastructure",
     date: "2024-02-05",
     readTime: "6 min read",
-    image: "/evcharge.jpeg",
+    image: "/california-ev-future.jpg",
     slug: "california-ev-infrastructure-2024",
     featured: false
   },
@@ -59,7 +59,7 @@ const blogPosts = [
     category: "Sustainability",
     date: "2024-02-12",
     readTime: "4 min read",
-    image: "/evcharge.jpeg",
+    image: "/green-business-ev.jpg",
     slug: "ev-charging-boosts-business-environmental-credentials",
     featured: false
   },
@@ -70,7 +70,7 @@ const blogPosts = [
     category: "Revenue",
     date: "2024-02-19",
     readTime: "6 min read",
-    image: "/evcharge.jpeg",
+    image: "/ev-charging-revenue.jpg",
     slug: "economics-ev-charging-revenue-potential",
     featured: false
   }
