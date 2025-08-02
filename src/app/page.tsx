@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link href="/apply">
                     <button className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button animate-pulse">
-                      🚨 SECURE YOUR SPOT NOW - FREE! 🚨
+                      🚨 SECURE YOUR SPOT NOW! 🚨
                     </button>
                   </Link>
                   <Link href="/about">
@@ -259,7 +259,7 @@ export default function Home() {
               </p>
               <Link href="/apply">
                 <button className="bg-yellow-400 hover:bg-yellow-300 text-red-800 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-xl sm:text-2xl font-bold shadow-2xl font-poppins bounce-hover elastic-button transform hover:scale-105 transition-all duration-300">
-                  🚨 SECURE YOUR SPOT NOW - FREE! 🚨
+                  🚨 SECURE YOUR SPOT NOW! 🚨
                 </button>
               </Link>
               <p className="text-sm text-yellow-200 mt-4">
