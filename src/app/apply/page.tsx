@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import MobileScarcityBanner from '@/components/MobileScarcityBanner'
 
 export default function Apply() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,42 @@ export default function Apply() {
     parkingSpaces: '',
     message: ''
   })
+
+  const [spotsLeft, setSpotsLeft] = useState(47)
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 23,
+    minutes: 59,
+    seconds: 59
+  })
+
+  useEffect(() => {
+    // Countdown timer
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 }
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 }
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 }
+        } else {
+          return { hours: 23, minutes: 59, seconds: 59 }
+        }
+      })
+    }, 1000)
+
+    // Randomly decrease spots
+    const spotsTimer = setInterval(() => {
+      if (Math.random() < 0.1 && spotsLeft > 1) {
+        setSpotsLeft(prev => prev - 1)
+      }
+    }, 4000)
+
+    return () => {
+      clearInterval(timer)
+      clearInterval(spotsTimer)
+    }
+  }, [spotsLeft])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -32,6 +69,9 @@ export default function Apply() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+      {/* Mobile Scarcity Banner */}
+      <MobileScarcityBanner />
+      
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -56,6 +96,31 @@ export default function Apply() {
       </nav>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        {/* Urgency Banner */}
+        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-6 mb-8 text-white text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            ⚠️ LIMITED TIME OFFER - ACT FAST! ⚠️
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="bg-white/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-yellow-300">{spotsLeft}</div>
+              <div className="text-sm">Spots Left</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-yellow-300">Free</div>
+              <div className="text-sm">Installation</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-yellow-300">$0</div>
+              <div className="text-sm">Setup Cost</div>
+            </div>
+          </div>
+          <p className="text-lg font-medium">
+            <span className="text-yellow-300 font-bold">Limited spots available!</span> 
+            <br />Complete your application now to secure your free installation
+          </p>
+        </div>
+
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Apply to Join EV Charge Partners
@@ -238,10 +303,13 @@ export default function Apply() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg animate-pulse"
               >
-                Submit Application
+                🚨 SECURE MY SPOT NOW - FREE! 🚨
               </button>
+              <p className="text-sm text-gray-500 mt-2">
+                ⚡ <span className="font-bold">Limited spots available</span> • Only {spotsLeft} spots left
+              </p>
             </div>
           </form>
         </div>
