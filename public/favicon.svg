@@ -1,19 +1,26 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Wheel rim -->
-  <circle cx="16" cy="16" r="14" fill="none" stroke="#16a34a" stroke-width="2"/>
-  <circle cx="16" cy="16" r="10" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+  <!-- Battery outline -->
+  <rect x="6" y="10" width="18" height="12" rx="2" ry="2" 
+        fill="#16a34a" 
+        stroke="#16a34a" 
+        stroke-width="1"/>
   
-  <!-- Center hub -->
-  <circle cx="16" cy="16" r="4" fill="#16a34a"/>
+  <!-- Battery terminal -->
+  <rect x="24" y="13" width="2" height="6" 
+        fill="#16a34a" 
+        stroke="#16a34a" 
+        stroke-width="1"/>
   
-  <!-- Spokes -->
-  <g stroke="#16a34a" stroke-width="1.5" stroke-linecap="round">
-    <line x1="16" y1="6" x2="16" y2="12"/>
-    <line x1="16" y1="20" x2="16" y2="26"/>
-    <line x1="6" y1="16" x2="12" y2="16"/>
-    <line x1="20" y1="16" x2="26" y2="16"/>
-  </g>
+  <!-- Battery level indicator -->
+  <rect x="8" y="12" width="14" height="8" rx="1" ry="1" 
+        fill="#ffffff" 
+        opacity="0.8"/>
   
-  <!-- EV charging bolt in center -->
-  <path d="M16 14 L16 18 M14 15 L18 15 M14 17 L18 17" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  <!-- Lightning bolt inside battery -->
+  <path d="M13 14 L16 17 L15 18 L18 20 L17 21 L14 18 L15 17 L12 15 Z" 
+        fill="#16a34a" 
+        opacity="0.9"/>
+  
+  <!-- EV indicator dot -->
+  <circle cx="26" cy="8" r="2" fill="#16a34a" opacity="0.8"/>
 </svg> 
