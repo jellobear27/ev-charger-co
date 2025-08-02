@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import BenefitCard from '@/components/BenefitCard'
 import ScrollingBanner from '@/components/ScrollingBanner'
 import ScarcityNotification from '@/components/ScarcityNotification'
 import ScarcityCounter from '@/components/ScarcityCounter'
@@ -9,52 +8,6 @@ import ConfettiEffect from '@/components/ConfettiEffect'
 import Image from 'next/image'
 
 export default function Home() {
-  const benefits = [
-    {
-      title: "$0 Out-of-Pocket Install",
-      description: "We pay for all equipment & installation. You just provide the space and start earning immediately.",
-      icon: (
-        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-        </svg>
-      ),
-      color: "bg-green-500",
-      delay: 0
-    },
-    {
-      title: "Monthly Passive Income",
-      description: "Earn from every charge. The more traffic, the more you earn. Set it and forget it.",
-      icon: (
-        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
-      color: "bg-blue-500",
-      delay: 1
-    },
-    {
-      title: "Boost Customer Traffic",
-      description: "Increase foot traffic without spending a dime. Attract eco-conscious customers to your business.",
-      icon: (
-        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      color: "bg-purple-500",
-      delay: 2
-    },
-    {
-      title: "No Maintenance, No Hassle",
-      description: "We handle permitting, utility approval, installation, and ongoing maintenance. You just collect income.",
-      icon: (
-        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z" />
-        </svg>
-      ),
-      color: "bg-orange-500",
-      delay: 3
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -185,30 +138,83 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Benefits Section with Confetti */}
+        {/* EV Wave Section with Confetti */}
         <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
           <ConfettiEffect />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat">
-                Why California Businesses Are Installing EV Chargers — At Zero Cost
+                The EV Wave Is Here:
+                <br />
+                <span className="text-green-600">Ride the Momentum or Risk Being Left Behind</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 font-poppins">
-                Join hundreds of California businesses already earning monthly passive income while boosting customer traffic
+                The electric vehicle revolution is accelerating faster than anyone predicted. Don't miss your chance to profit from this massive shift.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {benefits.map((benefit, index) => (
-                <BenefitCard
-                  key={index}
-                  title={benefit.title}
-                  description={benefit.description}
-                  icon={benefit.icon}
-                  color={benefit.color}
-                  delay={benefit.delay}
-                />
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+              {/* Card 1: Exponential Growth */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Exponential Growth</h3>
+                </div>
+                <p className="text-gray-700 text-center font-poppins leading-relaxed">
+                  <span className="font-bold text-blue-600">Global EV sales topped 14 million in 2023</span>, up from just 3 million in 2020. This represents a <span className="font-bold text-blue-600">367% increase</span> in just 3 years.
+                </p>
+              </div>
+
+              {/* Card 2: Infrastructure Demand Spike */}
+              <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Infrastructure Demand Spike</h3>
+                </div>
+                <p className="text-gray-700 text-center font-poppins leading-relaxed">
+                  The U.S. needs <span className="font-bold text-red-600">1.2 million public chargers by 2025</span>; only <span className="font-bold text-red-600">170,000 exist today</span>. That's a <span className="font-bold text-red-600">600% gap</span> that needs to be filled.
+                </p>
+              </div>
+
+              {/* Card 3: Consumer Expectations */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Consumer Expectations</h3>
+                </div>
+                <p className="text-gray-700 text-center font-poppins leading-relaxed">
+                  <span className="font-bold text-green-600">EV owners plan routes based on charging availability</span> — visibility matters. Businesses with chargers become <span className="font-bold text-green-600">destination points</span> for millions of EV drivers.
+                </p>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-12 sm:mt-16">
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 shadow-xl">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 font-montserrat">
+                  🚀 Don't Get Left Behind - Join the EV Revolution Today!
+                </h3>
+                <p className="text-lg text-green-100 mb-6 font-poppins">
+                  Secure your spot now and start earning from the fastest-growing market in automotive history
+                </p>
+                <Link href="/apply">
+                  <button className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-8 py-4 rounded-xl text-xl font-bold shadow-2xl font-poppins transform hover:scale-105 transition-all duration-300">
+                    🎯 CLAIM YOUR SPOT - FREE INSTALLATION!
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
