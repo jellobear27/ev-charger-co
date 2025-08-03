@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     publishedTime: '2024-01-15T00:00:00.000Z',
     authors: ['EV Charge Partner'],
-    images: ['/evcharge.jpeg'],
+    images: ['/range.jpeg'],
   },
 }
 
@@ -61,15 +61,15 @@ export default function RangeAnxietyArticle() {
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none text-gray-900">
           {/* Featured Image */}
           <div className="mb-8">
             <Image
-              src="/ev-infrastructure-california.jpg"
-              alt="EV chargers in a California parking lot showing the expanding charging infrastructure"
-              width={800}
-              height={400}
-              className="rounded-xl w-full"
+              src="/range.jpeg"
+              alt="Range anxiety concept showing EV charging and California landscape"
+              width={600}
+              height={800}
+              className="rounded-xl w-full max-w-md mx-auto"
             />
           </div>
 
@@ -81,7 +81,7 @@ export default function RangeAnxietyArticle() {
           {/* Section 1 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Evolution of Range Anxiety in California</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Just a few years ago, range anxiety was a legitimate concern for potential EV buyers in California. With limited charging infrastructure and EVs offering ranges of 100-200 miles, drivers worried about being stranded without power. However, the landscape has dramatically changed.
           </p>
 
@@ -98,29 +98,29 @@ export default function RangeAnxietyArticle() {
           {/* Section 2 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">California's Charging Infrastructure Revolution</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             California's commitment to becoming a zero-emission state by 2035 has driven unprecedented investment in EV charging infrastructure. The state has implemented several key initiatives:
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">1. The California Electric Vehicle Infrastructure Project (CALeVIP)</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             This $2.9 billion program is installing thousands of charging stations across the state, with a focus on underserved communities and multi-unit dwellings. The project aims to install 250,000 chargers by 2025.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Workplace and Destination Charging</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             California businesses are increasingly installing EV chargers to attract customers and employees. This creates a network of convenient charging options where people naturally spend time—at work, shopping, dining, and entertainment venues.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Fast Charging Corridors</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             The state has established fast-charging corridors along major highways, ensuring that long-distance travel is practical for EV owners. These corridors feature DC fast chargers that can add 200+ miles of range in just 30 minutes.
           </p>
 
           {/* Section 3 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Affects Business Owners</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             The reduction in range anxiety is creating new opportunities for California business owners. As EV adoption increases, customers are actively seeking businesses that offer charging services.
           </p>
 
@@ -138,16 +138,16 @@ export default function RangeAnxietyArticle() {
           {/* Section 4 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future of EV Adoption in California</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             With range anxiety becoming less of a concern, EV adoption in California is accelerating rapidly. The state is on track to meet its goal of 5 million zero-emission vehicles by 2030, and business owners who act now will be well-positioned to benefit from this transition.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Next?</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             The next phase of California's EV revolution will focus on:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>Ultra-fast charging networks (350kW+)</li>
             <li>Smart charging systems that optimize grid usage</li>
             <li>Integration with renewable energy sources</li>
@@ -158,7 +158,7 @@ export default function RangeAnxietyArticle() {
           {/* Conclusion */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
           
-          <p className="mb-8">
+          <p className="mb-8 text-gray-700">
             Range anxiety is no longer the barrier it once was in California. With the state's comprehensive charging infrastructure and improving EV technology, the focus has shifted from "Can I make it?" to "Where should I charge?" This shift represents a massive opportunity for business owners to position themselves as leaders in the clean energy economy.
           </p>
 

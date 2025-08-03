@@ -73,21 +73,27 @@ export default function Apply() {
       <MobileScarcityBanner />
       
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 border-b border-white/20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
-              <img src="/logo.svg" alt="EV Charge Partners" className="hidden sm:block h-10" />
-            </Link>
+              <div className="hidden sm:flex items-center space-x-3">
+                <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
+                <div className="text-left">
+                  <div className="text-lg font-bold text-white font-montserrat">EV CHARGE PARTNERS</div>
+                  <div className="text-sm text-gray-200 font-poppins">of California</div>
+                </div>
+              </div>
+            </div>
             <div className="hidden sm:flex space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
-              <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
+              <Link href="/" className="text-white hover:text-green-400 transition-colors">Home</Link>
+              <Link href="/about" className="text-white hover:text-green-400 transition-colors">About</Link>
               <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
             </div>
             {/* Mobile menu button */}
             <div className="sm:hidden">
-              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors text-sm">
+              <Link href="/" className="text-white hover:text-green-400 transition-colors text-sm">
                 Home
               </Link>
             </div>
@@ -144,7 +150,7 @@ export default function Apply() {
                   required
                   value={formData.businessName}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="Your business name"
                 />
               </div>
@@ -160,7 +166,7 @@ export default function Apply() {
                   required
                   value={formData.contactName}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="Your full name"
                 />
               </div>
@@ -176,7 +182,7 @@ export default function Apply() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="your@email.com"
                 />
               </div>
@@ -192,7 +198,7 @@ export default function Apply() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -208,7 +214,7 @@ export default function Apply() {
                   required
                   value={formData.address}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="123 Main Street"
                 />
               </div>
@@ -224,7 +230,7 @@ export default function Apply() {
                   required
                   value={formData.city}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="Los Angeles"
                 />
               </div>
@@ -240,7 +246,7 @@ export default function Apply() {
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="90210"
                 />
               </div>
@@ -255,7 +261,7 @@ export default function Apply() {
                   required
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                 >
                   <option value="">Select business type</option>
                   <option value="restaurant">Restaurant</option>
@@ -278,7 +284,7 @@ export default function Apply() {
                   required
                   value={formData.parkingSpaces}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="10"
                   min="1"
                 />
@@ -295,7 +301,7 @@ export default function Apply() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                 placeholder="Tell us about your business and why you'd like to host an EV charger..."
               />
             </div>

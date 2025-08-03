@@ -15,7 +15,7 @@ const blogPosts = [
     category: "EV Adoption",
     date: "2024-01-15",
     readTime: "5 min read",
-    image: "/ev-infrastructure-california.jpg",
+    image: "/range.jpeg",
     slug: "range-anxiety-ev-adoption-california",
     featured: true
   },
