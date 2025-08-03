@@ -26,7 +26,7 @@ const blogPosts = [
     category: "Business Opportunity",
     date: "2024-01-22",
     readTime: "7 min read",
-    image: "/ev-charging-business.jpg",
+    image: "/opportunity.jpeg",
     slug: "california-businesses-profiting-ev-charging",
     featured: true
   },
@@ -40,39 +40,6 @@ const blogPosts = [
     image: "/ev-charging-guide.jpg",
     slug: "complete-guide-ev-charging-business-owners",
     featured: false
-  },
-  {
-    id: 4,
-    title: "California's EV Infrastructure: What's Coming in 2024",
-    excerpt: "An inside look at California's ambitious plans to expand EV charging infrastructure and what it means for business owners.",
-    category: "Infrastructure",
-    date: "2024-02-05",
-    readTime: "6 min read",
-    image: "/california-ev-future.jpg",
-    slug: "california-ev-infrastructure-2024",
-    featured: false
-  },
-  {
-    id: 5,
-    title: "Going Green: How EV Charging Boosts Your Business's Environmental Credentials",
-    excerpt: "Learn how hosting EV chargers can enhance your brand's sustainability profile and attract eco-conscious customers.",
-    category: "Sustainability",
-    date: "2024-02-12",
-    readTime: "4 min read",
-    image: "/green-business-ev.jpg",
-    slug: "ev-charging-boosts-business-environmental-credentials",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "The Economics of EV Charging: Understanding Revenue Potential",
-    excerpt: "Break down the numbers: how much can you really earn from hosting EV chargers? Real data and projections.",
-    category: "Revenue",
-    date: "2024-02-19",
-    readTime: "6 min read",
-    image: "/ev-charging-revenue.jpg",
-    slug: "economics-ev-charging-revenue-potential",
-    featured: false
   }
 ]
 
@@ -80,9 +47,6 @@ const categories = [
   "All",
   "EV Adoption",
   "Business Opportunity", 
-  "Infrastructure",
-  "Sustainability",
-  "Revenue",
   "Business Guide"
 ]
 

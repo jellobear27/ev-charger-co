@@ -234,13 +234,13 @@ export default function CompleteGuideArticle() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/economics-ev-charging-revenue-potential" className="block group">
+            <Link href="/blog/range-anxiety-ev-adoption-california" className="block group">
               <div className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  The Economics of EV Charging: Understanding Revenue Potential
+                  Range Anxiety: The Real Story Behind EV Adoption in California
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Break down the numbers: how much can you really earn from hosting EV chargers?
+                  Discover why range anxiety is becoming less of a concern and how California's charging infrastructure is evolving.
                 </p>
               </div>
             </Link>

@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     publishedTime: '2024-01-22T00:00:00.000Z',
     authors: ['EV Charge Partner'],
-    images: ['/ev-charging-business.jpg'],
+    images: ['/opportunity.jpeg'],
   },
 }
 
@@ -61,12 +61,12 @@ export default function CaliforniaBusinessesArticle() {
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none text-gray-900">
           {/* Featured Image */}
           <div className="mb-8">
             <Image
-              src="/ev-charging-business.jpg"
-              alt="California shopping center with EV charging stations and customers using them"
+              src="/opportunity.jpeg"
+              alt="Business opportunity concept showing EV charging and California business success"
               width={800}
               height={400}
               className="rounded-xl w-full"
@@ -81,7 +81,7 @@ export default function CaliforniaBusinessesArticle() {
           {/* Section 1 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Revenue Revolution: Real Numbers from California Businesses</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             While many business owners initially install EV chargers for environmental reasons, they're quickly discovering the financial benefits. Let's look at some real examples from across California.
           </p>
 
@@ -99,16 +99,16 @@ export default function CaliforniaBusinessesArticle() {
           {/* Section 2 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Case Study: The Marina Shopping Center Success Story</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Located in the heart of Silicon Valley, Marina Shopping Center was struggling with declining foot traffic and increasing competition from online retailers. Their decision to install 12 EV charging stations transformed their business model.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">The Transformation</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Within six months of installing the charging stations, Marina Shopping Center saw:
           </p>
 
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>45% increase in daily foot traffic</li>
             <li>$6,200 average monthly revenue from charging fees</li>
             <li>28% increase in average customer spend</li>
@@ -117,14 +117,14 @@ export default function CaliforniaBusinessesArticle() {
           </ul>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">The Customer Experience</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             "Our customers love the convenience," says Sarah Chen, Marina's property manager. "They can charge their cars while shopping, dining, or running errands. It's become a destination, not just a shopping center."
           </p>
 
           {/* Section 3 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Restaurant Revolution: How EV Charging Boosts Dining Revenue</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             California restaurants are discovering that EV chargers are the perfect complement to their business model. The charging time naturally aligns with dining duration, creating a win-win scenario.
           </p>
 
@@ -142,16 +142,16 @@ export default function CaliforniaBusinessesArticle() {
           {/* Section 4 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Hotel Advantage: Capturing the EV Travel Market</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             California's tourism industry is rapidly adapting to the EV revolution. Hotels with charging stations are capturing a growing market of EV travelers who specifically seek out charging-friendly accommodations.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">The Numbers Speak</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Hotels with EV charging stations report:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>15-25% higher room rates for EV-friendly rooms</li>
             <li>Increased bookings from corporate clients with EV fleets</li>
             <li>Positive reviews mentioning charging availability</li>
@@ -162,16 +162,16 @@ export default function CaliforniaBusinessesArticle() {
           {/* Section 5 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Office Building Opportunity</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Office buildings and business parks are finding that EV charging stations are essential amenities for attracting and retaining top talent. In California's competitive job market, this can be a game-changer.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Employee Benefits</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Companies with workplace charging report:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>Higher employee satisfaction scores</li>
             <li>Improved recruitment of environmentally conscious talent</li>
             <li>Reduced employee turnover</li>
@@ -182,7 +182,7 @@ export default function CaliforniaBusinessesArticle() {
           {/* Conclusion */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future of Business in California</h2>
           
-          <p className="mb-8">
+          <p className="mb-8 text-gray-700">
             As California continues its transition to electric vehicles, businesses that embrace EV charging will have a significant competitive advantage. The early adopters are already reaping the rewards, and the market is only growing.
           </p>
 
@@ -213,13 +213,13 @@ export default function CaliforniaBusinessesArticle() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/economics-ev-charging-revenue-potential" className="block group">
+            <Link href="/blog/complete-guide-ev-charging-business-owners" className="block group">
               <div className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  The Economics of EV Charging: Understanding Revenue Potential
+                  The Complete Guide to EV Charging for Business Owners
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Break down the numbers: how much can you really earn from hosting EV chargers?
+                  Everything you need to know about installing EV chargers at your business.
                 </p>
               </div>
             </Link>

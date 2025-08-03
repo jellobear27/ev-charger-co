@@ -189,13 +189,13 @@ export default function RangeAnxietyArticle() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/california-ev-infrastructure-2024" className="block group">
+            <Link href="/blog/complete-guide-ev-charging-business-owners" className="block group">
               <div className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  California's EV Infrastructure: What's Coming in 2024
+                  The Complete Guide to EV Charging for Business Owners
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  An inside look at California's ambitious plans to expand EV charging infrastructure.
+                  Everything you need to know about installing EV chargers at your business.
                 </p>
               </div>
             </Link>
