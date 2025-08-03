@@ -19,7 +19,7 @@ export default function About() {
 
       <div className="max-w-4xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6 font-gelasio">
             About EV Charge Partner
           </h1>
           <p className="text-xl text-gray-600">
@@ -29,7 +29,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-gelasio">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-6">
               To accelerate the adoption of electric vehicles by making charging accessible everywhere while 
               creating new revenue opportunities for California businesses.
@@ -40,7 +40,7 @@ export default function About() {
             </p>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-gelasio">How It Works</h2>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
@@ -68,7 +68,7 @@ export default function About() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose EV Charge Partner?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center font-gelasio">Why Choose EV Charge Partner?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

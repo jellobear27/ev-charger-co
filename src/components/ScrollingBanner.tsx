@@ -64,7 +64,7 @@ export default function ScrollingBanner() {
         <span className="text-lg font-bold mx-8 flex items-center">
           🔥 <span className="text-yellow-300 mx-2">HOT DEAL ALERT:</span> Free installation available now! 
         </span>
-        {/* Duplicate set for seamless loop */}
+        {/* Second set for seamless loop */}
         <span className="text-lg font-bold mx-8 flex items-center">
           ⚠️ <span className="text-yellow-300 mx-2">LIMITED SPOTS:</span> Only {spotsLeft} spots left in your area! 
         </span>
@@ -83,6 +83,24 @@ export default function ScrollingBanner() {
           🔥 <span className="text-yellow-300 mx-2">HOT DEAL ALERT:</span> Free installation available now! 
         </span>
         {/* Third set for extra smoothness */}
+        <span className="text-lg font-bold mx-8 flex items-center">
+          ⚠️ <span className="text-yellow-300 mx-2">LIMITED SPOTS:</span> Only {spotsLeft} spots left in your area! 
+        </span>
+        <span className="text-lg font-bold mx-8 flex items-center">
+          🚨 <span className="text-yellow-300 mx-2">FREE INSTALLATION AVAILABLE!</span> 
+          <span className="text-yellow-300 mx-2">Only {spotsLeft} businesses can still qualify!</span>
+        </span>
+        <span className="text-lg font-bold mx-8 flex items-center">
+          💰 <span className="text-yellow-300 mx-2">$0 SETUP COST</span> 
+          <span className="text-yellow-300 mx-2">Limited time offer!</span>
+        </span>
+        <span className="text-lg font-bold mx-8 flex items-center">
+          ⚡ <span className="text-yellow-300 mx-2">DON'T MISS OUT:</span> {spotsLeft} spots remaining for free EV charger installation!
+        </span>
+        <span className="text-lg font-bold mx-8 flex items-center">
+          🔥 <span className="text-yellow-300 mx-2">HOT DEAL ALERT:</span> Free installation available now! 
+        </span>
+        {/* Fourth set for perfect seamless loop */}
         <span className="text-lg font-bold mx-8 flex items-center">
           ⚠️ <span className="text-yellow-300 mx-2">LIMITED SPOTS:</span> Only {spotsLeft} spots left in your area! 
         </span>

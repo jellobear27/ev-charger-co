@@ -107,7 +107,7 @@ export default function Blog() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-600 to-green-700 py-20">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1 className="text-5xl font-bold text-white mb-6 font-gelasio">
             EV Charging Insights & News
           </h1>
           <p className="text-xl text-green-100 mb-8">
@@ -122,7 +122,7 @@ export default function Blog() {
       {/* Featured Posts */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Articles</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-gelasio">Featured Articles</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {blogPosts.filter(post => post.featured).map((post) => (
               <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -167,7 +167,7 @@ export default function Blog() {
           <div className="flex flex-col md:flex-row gap-8">
             {/* Main Content */}
             <div className="flex-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 font-gelasio">Latest Articles</h2>
               <div className="space-y-8">
                 {blogPosts.map((post) => (
                   <article key={post.id} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">

@@ -34,7 +34,7 @@ export default function ConfettiEffect() {
         speed: 2 + Math.random() * 1,
         opacity: 0.7 + Math.random() * 0.3,
         size: 40 + Math.random() * 10,
-        zIndex: Math.random() > 0.5 ? 10 : 100
+        zIndex: Math.random() > 0.8 ? 15 : Math.random() > 0.6 ? 5 : 1
       }
 
       setConfetti(prev => [...prev, newPiece])
@@ -64,7 +64,7 @@ export default function ConfettiEffect() {
   if (!isActive) return null
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
       {confetti.map(piece => (
         <div
           key={piece.id}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat } from "next/font/google";
+import { Poppins, Montserrat, Gelasio } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
@@ -13,6 +13,12 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-montserrat",
+});
+
+const gelasio = Gelasio({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-gelasio",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${montserrat.variable} font-sans`}>
+      <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
         {children}
         <Footer />
       </body>

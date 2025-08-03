@@ -71,7 +71,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Text Content */}
               <div className="text-white text-center lg:text-left">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-montserrat">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-gelasio">
                   $0 Out-of-Pocket Install
                   <span className="text-green-400 block font-poppins">Earn Monthly Passive Income</span>
                 </h1>
@@ -139,11 +139,11 @@ export default function Home() {
         </section>
 
         {/* EV Wave Section with Confetti */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-20 bg-orange-50 relative overflow-hidden">
           <ConfettiEffect />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-montserrat">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-gelasio">
                 The EV Wave Is Here:
                 <br />
                 <span className="text-green-600">Ride the Momentum or Risk Being Left Behind</span>
@@ -154,48 +154,48 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
-              {/* Card 1: Exponential Growth */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              {/* Card 1: Exponential Growth - Green Theme */}
+              <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-4 border-green-300 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:border-green-400">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_15px_rgba(34,197,94,0.4)] hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Exponential Growth</h3>
+                  <h3 className="text-xl font-bold text-green-800 mb-2 font-gelasio">Exponential Growth</h3>
                 </div>
-                <p className="text-gray-700 text-center font-poppins leading-relaxed">
-                  <span className="font-bold text-blue-600">Global EV sales topped 14 million in 2023</span>, up from just 3 million in 2020. This represents a <span className="font-bold text-blue-600">367% increase</span> in just 3 years.
+                <p className="text-green-900 text-center font-poppins leading-relaxed">
+                  <span className="font-bold text-green-600">Global EV sales topped 14 million in 2023</span>, up from just 3 million in 2020. This represents a <span className="font-bold text-green-600">367% increase</span> in just 3 years.
                 </p>
               </div>
 
-              {/* Card 2: Infrastructure Demand Spike */}
-              <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              {/* Card 2: Infrastructure Demand Spike - Red Theme */}
+              <div className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-4 border-red-300 shadow-[0_0_20px_rgba(239,68,68,0.3)] hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] hover:border-red-400">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_15px_rgba(239,68,68,0.4)] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Infrastructure Demand Spike</h3>
+                  <h3 className="text-xl font-bold text-red-800 mb-2 font-gelasio">Infrastructure Demand Spike</h3>
                 </div>
-                <p className="text-gray-700 text-center font-poppins leading-relaxed">
+                <p className="text-red-900 text-center font-poppins leading-relaxed">
                   The U.S. needs <span className="font-bold text-red-600">1.2 million public chargers by 2025</span>; only <span className="font-bold text-red-600">170,000 exist today</span>. That's a <span className="font-bold text-red-600">600% gap</span> that needs to be filled.
                 </p>
               </div>
 
-              {/* Card 3: Consumer Expectations */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              {/* Card 3: Consumer Expectations - Blue Theme */}
+              <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-4 border-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:border-blue-400">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">Consumer Expectations</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-2 font-gelasio">Consumer Expectations</h3>
                 </div>
-                <p className="text-gray-700 text-center font-poppins leading-relaxed">
-                  <span className="font-bold text-green-600">EV owners plan routes based on charging availability</span> — visibility matters. Businesses with chargers become <span className="font-bold text-green-600">destination points</span> for millions of EV drivers.
+                <p className="text-blue-900 text-center font-poppins leading-relaxed">
+                  <span className="font-bold text-blue-600">EV owners plan routes based on charging availability</span> — visibility matters. Businesses with chargers become <span className="font-bold text-blue-600">destination points</span> for millions of EV drivers.
                 </p>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function Home() {
             {/* Call to Action */}
             <div className="text-center mt-12 sm:mt-16">
               <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 shadow-xl">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 font-montserrat">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 font-gelasio">
                   🚀 Don't Get Left Behind - Join the EV Revolution Today!
                 </h3>
                 <p className="text-lg text-green-100 mb-6 font-poppins">
@@ -230,7 +230,7 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-montserrat">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-gelasio">
                 ⚠️ LIMITED TIME OFFER - DON&apos;T MISS OUT! ⚠️
               </h2>
               <p className="text-lg sm:text-xl text-yellow-200 mb-6 font-poppins">
@@ -272,7 +272,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-green-600 to-green-700 py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-montserrat">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-gelasio">
               Ready to Start Earning Monthly Passive Income?
             </h2>
             <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 font-poppins">

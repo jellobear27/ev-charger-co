@@ -98,7 +98,7 @@ export default function Apply() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Urgency Banner */}
         <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-6 mb-8 text-white text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-gelasio">
             ⚠️ LIMITED TIME OFFER - ACT FAST! ⚠️
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -122,7 +122,7 @@ export default function Apply() {
         </div>
 
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-gelasio">
             Apply to Join EV Charge Partners
           </h1>
           <p className="text-lg sm:text-xl text-gray-600">

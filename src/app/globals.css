@@ -112,15 +112,15 @@ body {
 /* Scrolling banner animation */
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .animate-scroll {
-  animation: scroll 25s linear infinite;
+  animation: scroll 12s linear infinite;
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -130,14 +130,14 @@ body {
 /* Faster animation on mobile */
 @media (max-width: 768px) {
   .animate-scroll {
-    animation: scroll 20s linear infinite;
+    animation: scroll 10s linear infinite;
   }
 }
 
 /* Even faster on small mobile */
 @media (max-width: 480px) {
   .animate-scroll {
-    animation: scroll 18s linear infinite;
+    animation: scroll 8s linear infinite;
   }
 }
 
@@ -216,4 +216,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Gelasio font for headlines */
+.headline-font {
+  font-family: var(--font-gelasio), "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
