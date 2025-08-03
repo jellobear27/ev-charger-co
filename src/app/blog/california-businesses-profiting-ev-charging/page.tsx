@@ -67,9 +67,9 @@ export default function CaliforniaBusinessesArticle() {
             <Image
               src="/opportunity.jpeg"
               alt="Business opportunity concept showing EV charging and California business success"
-              width={800}
-              height={400}
-              className="rounded-xl w-full"
+              width={600}
+              height={800}
+              className="rounded-xl w-full max-w-md mx-auto"
             />
           </div>
 
