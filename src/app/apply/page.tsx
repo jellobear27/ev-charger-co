@@ -200,7 +200,7 @@ export default function Apply() {
                   required
                   value={formData.businessName}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="Your business name"
                 />
               </div>
@@ -216,7 +216,7 @@ export default function Apply() {
                   required
                   value={formData.contactName}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="Your full name"
                 />
               </div>
@@ -232,7 +232,7 @@ export default function Apply() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="your@email.com"
                 />
               </div>
@@ -248,7 +248,7 @@ export default function Apply() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -264,7 +264,7 @@ export default function Apply() {
                   required
                   value={formData.address}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="123 Main Street"
                 />
               </div>
@@ -280,7 +280,7 @@ export default function Apply() {
                   required
                   value={formData.city}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="Los Angeles"
                 />
               </div>
@@ -296,7 +296,7 @@ export default function Apply() {
                   required
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="90210"
                 />
               </div>
@@ -311,15 +311,15 @@ export default function Apply() {
                   required
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                 >
-                  <option value="">Select business type</option>
-                  <option value="restaurant">Restaurant</option>
-                  <option value="retail">Retail Store</option>
-                  <option value="office">Office Building</option>
-                  <option value="hotel">Hotel/Motel</option>
-                  <option value="shopping-center">Shopping Center</option>
-                  <option value="other">Other</option>
+                  <option value="" className="text-gray-500">Select business type</option>
+                  <option value="restaurant" className="text-gray-900">Restaurant</option>
+                  <option value="retail" className="text-gray-900">Retail Store</option>
+                  <option value="office" className="text-gray-900">Office Building</option>
+                  <option value="hotel" className="text-gray-900">Hotel/Motel</option>
+                  <option value="shopping-center" className="text-gray-900">Shopping Center</option>
+                  <option value="other" className="text-gray-900">Other</option>
                 </select>
               </div>
 
@@ -334,7 +334,7 @@ export default function Apply() {
                   required
                   value={formData.parkingSpaces}
                   onChange={handleChange}
-                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                  className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                   placeholder="10"
                   min="4"
                 />
@@ -352,7 +352,7 @@ export default function Apply() {
                 name="photoUpload"
                 accept="image/*"
                 onChange={handleFileChange}
-                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
               />
               <p className="text-xs text-gray-500 mt-1">Upload a photo of your parking area or property</p>
             </div>
@@ -367,7 +367,7 @@ export default function Apply() {
                 rows={4}
                 value={formData.locationBenefits}
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-white text-gray-900"
                 placeholder="Tell us about your foot traffic, proximity to freeways, customer demographics, or any other factors that make your location ideal for EV charging..."
               />
             </div>
