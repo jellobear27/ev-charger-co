@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Only initialize Resend if API key is available
+const resend = process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_resend_api_key_here' 
+  ? new Resend(process.env.RESEND_API_KEY) 
+  : null
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,10 +19,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Check if Resend is configured
+    if (!resend) {
+      console.log('Resend API key not configured. Subscription logged:', email)
+      return NextResponse.json({ 
+        success: true,
+        message: 'Subscription received (email service not configured)'
+      })
+    }
+
     // Send notification to your business
     const { data, error } = await resend.emails.send({
-      from: 'EV Charge Partners <hello@evchargepartner.com>',
-      to: ['hello@evchargepartner.com'],
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
+      to: ['janell@evchargepartners.com'],
       subject: 'New Blog Subscription',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -45,7 +57,7 @@ export async function POST(request: NextRequest) {
 
     // Send welcome email to subscriber
     await resend.emails.send({
-      from: 'EV Charge Partners <hello@evchargepartner.com>',
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
       to: [email],
       subject: 'Welcome to EV Charge Partners Blog!',
       html: `
@@ -74,7 +86,7 @@ export async function POST(request: NextRequest) {
             <p style="color: #6b7280; font-size: 12px;">
               EV Charge Partners<br>
               California, USA<br>
-              <a href="mailto:hello@evchargepartner.com">hello@evchargepartner.com</a>
+              <a href="mailto:janell@evchargepartners.com">janell@evchargepartners.com</a>
             </p>
           </div>
         </div>

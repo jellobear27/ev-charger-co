@@ -37,7 +37,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 1. Start your development server: `npm run dev`
 2. Go to `/apply` and submit a test application
 3. Check that you receive:
-   - An email notification at `hello@evchargepartner.com`
+   - An email notification at `janell@evchargepartners.com`
    - A confirmation email to the test email address
 
 ## Email Templates
@@ -45,7 +45,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 The system includes two types of emails:
 
 ### 1. Application Notifications (to your business)
-- Sent to: `hello@evchargepartner.com`
+- Sent to: `janell@evchargepartners.com`
 - Subject: "New EV Station Application - [Business Name]"
 - Includes all form data in a professional format
 

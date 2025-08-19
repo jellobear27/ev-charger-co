@@ -386,7 +386,7 @@ export default function Apply() {
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
                 <div className="text-red-800 font-semibold mb-2">❌ Submission Failed</div>
                 <p className="text-red-700 text-sm">
-                  There was an error submitting your application. Please try again or contact us directly at hello@evchargepartner.com
+                  There was an error submitting your application. Please try again or contact us directly at janell@evchargepartners.com
                 </p>
               </div>
             )}
