@@ -61,15 +61,15 @@ export default function CompleteGuideArticle() {
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none text-gray-900">
           {/* Featured Image */}
           <div className="mb-8">
             <Image
-              src="/ev-charging-guide.jpg"
+              src="/evcar.jpeg"
               alt="Business owner reviewing EV charging station plans and specifications"
-              width={800}
-              height={400}
-              className="rounded-xl w-full"
+              width={600}
+              height={800}
+              className="rounded-xl w-full max-w-md mx-auto"
             />
           </div>
 
@@ -81,7 +81,7 @@ export default function CompleteGuideArticle() {
           {/* Section 1 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Install EV Charging Stations?</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Before diving into the technical details, it's important to understand the compelling reasons why businesses are installing EV chargers.
           </p>
 
@@ -100,16 +100,16 @@ export default function CompleteGuideArticle() {
           {/* Section 2 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Costs and ROI</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             One of the biggest misconceptions about EV charging stations is that they're expensive to install. With the right partner, you can install chargers with zero upfront costs.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Installation Costs Breakdown</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             When working with EV Charge Partners, your costs are:
           </p>
 
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li><strong>Equipment:</strong> $0 - We provide all charging equipment</li>
             <li><strong>Installation:</strong> $0 - We handle all installation costs</li>
             <li><strong>Permitting:</strong> $0 - We manage all permitting and approvals</li>
@@ -118,11 +118,11 @@ export default function CompleteGuideArticle() {
           </ul>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Potential</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Your revenue depends on usage, but typical returns include:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>Charging fees: $0.30-0.50 per kWh</li>
             <li>Increased customer spending: 25-40% more</li>
             <li>Higher customer retention rates</li>
@@ -132,7 +132,7 @@ export default function CompleteGuideArticle() {
           {/* Section 3 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Installation Process</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Understanding the installation process helps set proper expectations and ensures a smooth experience.
           </p>
 
@@ -147,11 +147,11 @@ export default function CompleteGuideArticle() {
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">What We Handle</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             EV Charge Partners manages the entire process:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>Site assessment and feasibility study</li>
             <li>Engineering and design</li>
             <li>Permitting and regulatory compliance</li>
@@ -164,16 +164,16 @@ export default function CompleteGuideArticle() {
           {/* Section 4 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Charging Solution</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Different businesses have different needs. We'll help you choose the optimal charging solution for your specific situation.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Charging Station Types</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             We offer several charging options:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li><strong>Level 2 Chargers:</strong> 7-22 kW, perfect for destination charging</li>
             <li><strong>DC Fast Chargers:</strong> 50-350 kW, ideal for high-traffic locations</li>
             <li><strong>Smart Chargers:</strong> Networked solutions with advanced features</li>
@@ -183,16 +183,16 @@ export default function CompleteGuideArticle() {
           {/* Section 5 */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Maximizing Your Investment</h2>
           
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Once your chargers are installed, there are several strategies to maximize your return on investment.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Marketing Your EV Charging</h3>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-700">
             Promote your charging stations to attract EV drivers:
           </p>
           
-          <ul className="list-disc pl-6 mb-8 space-y-2">
+          <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
             <li>List your location on EV charging apps</li>
             <li>Add EV charging to your website and social media</li>
             <li>Display signage indicating charging availability</li>
@@ -203,7 +203,7 @@ export default function CompleteGuideArticle() {
           {/* Conclusion */}
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
           
-          <p className="mb-8">
+          <p className="mb-8 text-gray-700">
             Installing EV charging stations is one of the smartest business decisions you can make in today's rapidly evolving market. With zero upfront costs and significant revenue potential, there's no better time to get started.
           </p>
 

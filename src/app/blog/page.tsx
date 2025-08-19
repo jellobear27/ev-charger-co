@@ -35,7 +35,7 @@ const blogPosts = [
     category: "Business Guide",
     date: "2024-01-29",
     readTime: "8 min read",
-    image: "/ev-charging-guide.jpg",
+    image: "/evcar.jpeg",
     slug: "complete-guide-ev-charging-business-owners",
     featured: false
   }
