@@ -1,11 +1,9 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
-export const metadata = {
-  title: 'EV Charging Blog - Latest News, Tips & Industry Insights | EV Charge Partner',
-  description: 'Stay updated with the latest EV charging news, tips for business owners, and insights on the electric vehicle revolution. Expert content on EV adoption, charging infrastructure, and green business opportunities.',
-  keywords: 'EV charging blog, electric vehicle news, EV charging tips, business EV charging, California EV charging, green business, EV infrastructure',
-}
+
 
 const blogPosts = [
   {
@@ -51,6 +49,41 @@ const categories = [
 ]
 
 export default function Blog() {
+  const [subscribeEmail, setSubscribeEmail] = useState('')
+  const [isSubscribing, setIsSubscribing] = useState(false)
+  const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubscribing(true)
+    setSubscribeStatus('idle')
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: subscribeEmail }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubscribeStatus('success')
+        setSubscribeEmail('')
+      } else {
+        setSubscribeStatus('error')
+        console.error('Subscription error:', result.error)
+      }
+    } catch (error) {
+      setSubscribeStatus('error')
+      console.error('Network error:', error)
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Navigation */}
@@ -191,16 +224,37 @@ export default function Blog() {
                 <div className="border-t border-gray-200 mt-6 pt-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe</h3>
                   <p className="text-gray-600 mb-4">Get the latest EV charging insights delivered to your inbox.</p>
-                  <div className="space-y-3">
+                  <form onSubmit={handleSubscribe} className="space-y-3">
                     <input
                       type="email"
                       placeholder="Enter your email"
+                      value={subscribeEmail}
+                      onChange={(e) => setSubscribeEmail(e.target.value)}
+                      required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     />
-                    <button className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                      Subscribe
+                    <button 
+                      type="submit"
+                      disabled={isSubscribing}
+                      className={`w-full px-4 py-2 rounded-lg transition-colors ${
+                        isSubscribing 
+                          ? 'bg-gray-400 cursor-not-allowed' 
+                          : 'bg-green-600 hover:bg-green-700'
+                      } text-white`}
+                    >
+                      {isSubscribing ? 'Subscribing...' : 'Subscribe'}
                     </button>
-                  </div>
+                  </form>
+                  {subscribeStatus === 'success' && (
+                    <div className="mt-3 p-2 bg-green-50 border border-green-200 rounded text-green-700 text-sm">
+                      ✅ Successfully subscribed!
+                    </div>
+                  )}
+                  {subscribeStatus === 'error' && (
+                    <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded text-red-700 text-sm">
+                      ❌ Subscription failed. Please try again.
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -14,7 +14,8 @@ export default function Apply() {
     zipCode: '',
     businessType: '',
     parkingSpaces: '',
-    message: ''
+    locationBenefits: '',
+    photoUpload: null as File | null
   })
 
   const [spotsLeft, setSpotsLeft] = useState(47)
@@ -53,11 +54,51 @@ export default function Apply() {
     }
   }, [spotsLeft])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your application! We\'ll be in touch soon.')
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        // Reset form
+        setFormData({
+          businessName: '',
+          contactName: '',
+          email: '',
+          phone: '',
+          address: '',
+          city: '',
+          zipCode: '',
+          businessType: '',
+          parkingSpaces: '',
+          locationBenefits: '',
+          photoUpload: null
+        })
+      } else {
+        setSubmitStatus('error')
+        console.error('Submission error:', result.error)
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+      console.error('Network error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -65,6 +106,15 @@ export default function Apply() {
       ...formData,
       [e.target.name]: e.target.value
     })
+  }
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFormData({
+        ...formData,
+        photoUpload: e.target.files[0]
+      })
+    }
   }
 
   return (
@@ -105,7 +155,7 @@ export default function Apply() {
         {/* Urgency Banner */}
         <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-6 mb-8 text-white text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-gelasio">
-            ⚠️ LIMITED TIME OFFER - ACT FAST! ⚠️
+            🕒 Why Now?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div className="bg-white/20 rounded-lg p-4">
@@ -113,26 +163,26 @@ export default function Apply() {
               <div className="text-sm">Spots Left</div>
             </div>
             <div className="bg-white/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-yellow-300">180kW+</div>
+              <div className="text-sm">DC Fast Chargers</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4">
               <div className="text-2xl font-bold text-yellow-300">Free</div>
               <div className="text-sm">Installation</div>
             </div>
-            <div className="bg-white/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300">$0</div>
-              <div className="text-sm">Setup Cost</div>
-            </div>
           </div>
           <p className="text-lg font-medium">
-            <span className="text-yellow-300 font-bold">Limited spots available!</span> 
-            <br />Complete your application now to secure your free installation
+            <span className="text-yellow-300 font-bold">We're selecting only 47 new host sites</span> 
+            <br />for our next deployment tranche — after that, this round closes
           </p>
         </div>
 
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-gelasio">
-            Apply to Join EV Charge Partners
+            Check If Your Property Qualifies
           </h1>
           <p className="text-lg sm:text-xl text-gray-600">
-            Join hundreds of California businesses earning passive income from EV charging
+            Get 180kW+ DC fast chargers installed at your property — completely free
           </p>
         </div>
 
@@ -286,32 +336,82 @@ export default function Apply() {
                   onChange={handleChange}
                   className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
                   placeholder="10"
-                  min="1"
+                  min="4"
                 />
+                <p className="text-xs text-gray-500 mt-1">Minimum 4 spaces required</p>
               </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Additional Information
+              <label htmlFor="photoUpload" className="block text-sm font-medium text-gray-700 mb-2">
+                Property Photo (Optional)
+              </label>
+              <input
+                type="file"
+                id="photoUpload"
+                name="photoUpload"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
+              />
+              <p className="text-xs text-gray-500 mt-1">Upload a photo of your parking area or property</p>
+            </div>
+
+            <div>
+              <label htmlFor="locationBenefits" className="block text-sm font-medium text-gray-700 mb-2">
+                Why Your Location Matters
               </label>
               <textarea
-                id="message"
-                name="message"
+                id="locationBenefits"
+                name="locationBenefits"
                 rows={4}
-                value={formData.message}
+                value={formData.locationBenefits}
                 onChange={handleChange}
                 className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50"
-                placeholder="Tell us about your business and why you'd like to host an EV charger..."
+                placeholder="Tell us about your foot traffic, proximity to freeways, customer demographics, or any other factors that make your location ideal for EV charging..."
               />
             </div>
+
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                <div className="text-green-800 font-semibold mb-2">✅ Application Submitted Successfully!</div>
+                <p className="text-green-700 text-sm">
+                  Thank you for your application! We've sent you a confirmation email and will be in touch within 24-48 hours.
+                </p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
+                <div className="text-red-800 font-semibold mb-2">❌ Submission Failed</div>
+                <p className="text-red-700 text-sm">
+                  There was an error submitting your application. Please try again or contact us directly at hello@evchargepartner.com
+                </p>
+              </div>
+            )}
 
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg animate-pulse"
+                disabled={isSubmitting}
+                className={`px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform transition-all duration-200 shadow-lg ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-red-600 hover:bg-red-700 hover:scale-105 animate-pulse'
+                } text-white`}
               >
-                🚨 SECURE MY SPOT NOW - FREE! 🚨
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Submitting...
+                  </span>
+                ) : (
+                  '🚨 SECURE MY SPOT NOW - FREE! 🚨'
+                )}
               </button>
               <p className="text-sm text-gray-500 mt-2">
                 ⚡ <span className="font-bold">Limited spots available</span> • Only {spotsLeft} spots left
