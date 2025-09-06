@@ -1,19 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Create transporter for Porkbun email service
+// Create transporter for Gmail SMTP (using your Gmail account)
 const createTransporter = () => {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
     return null
   }
   
   return nodemailer.createTransporter({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true',
+    service: 'gmail',
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: process.env.GMAIL_USER, // Your Gmail address
+      pass: process.env.GMAIL_APP_PASSWORD, // Gmail App Password
     },
   })
 }
@@ -42,10 +40,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if SMTP is configured
+    // Check if Gmail SMTP is configured
     const transporter = createTransporter()
     if (!transporter) {
-      console.log('SMTP not configured. Application logged:', {
+      console.log('Gmail SMTP not configured. Application logged:', {
         businessName,
         contactName,
         email,
@@ -57,10 +55,10 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Send email to your business
+    // Send email to your business (will forward to your Gmail)
     await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
-      to: 'janell@evchargepartners.com',
+      from: `"EV Charge Partners" <${process.env.GMAIL_USER}>`,
+      to: 'janell@evchargepartners.com', // This will forward to your Gmail
       subject: `New EV Station Application - ${businessName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -101,7 +99,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the applicant
     await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
+      from: `"EV Charge Partners" <${process.env.GMAIL_USER}>`,
       to: email,
       subject: 'Thank you for your EV Station Application',
       html: `
