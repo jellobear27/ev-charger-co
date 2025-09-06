@@ -1,22 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
-// Create transporter for Porkbun email service
-const createTransporter = () => {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    return null
-  }
-  
-  return nodemailer.createTransporter({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  })
-}
+// Only initialize Resend if API key is available
+const resend = process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_resend_api_key_here' 
+  ? new Resend(process.env.RESEND_API_KEY) 
+  : null
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,10 +30,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if SMTP is configured
-    const transporter = createTransporter()
-    if (!transporter) {
-      console.log('SMTP not configured. Application logged:', {
+    // Check if Resend is configured
+    if (!resend) {
+      console.log('Resend API key not configured. Application logged:', {
         businessName,
         contactName,
         email,
@@ -58,9 +45,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email to your business
-    await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
-      to: 'janell@evchargepartners.com',
+    const { data, error } = await resend.emails.send({
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
+      to: ['janell@evchargepartners.com'],
       subject: `New EV Station Application - ${businessName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -99,10 +86,18 @@ export async function POST(request: NextRequest) {
       `,
     })
 
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      )
+    }
+
     // Send confirmation email to the applicant
-    await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
-      to: email,
+    await resend.emails.send({
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
+      to: [email],
       subject: 'Thank you for your EV Station Application',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -146,4 +141,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+} 

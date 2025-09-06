@@ -1,22 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
-// Create transporter for Porkbun email service
-const createTransporter = () => {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    return null
-  }
-  
-  return nodemailer.createTransporter({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  })
-}
+// Only initialize Resend if API key is available
+const resend = process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your_resend_api_key_here' 
+  ? new Resend(process.env.RESEND_API_KEY) 
+  : null
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,10 +19,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if SMTP is configured
-    const transporter = createTransporter()
-    if (!transporter) {
-      console.log('SMTP not configured. Subscription logged:', email)
+    // Check if Resend is configured
+    if (!resend) {
+      console.log('Resend API key not configured. Subscription logged:', email)
       return NextResponse.json({ 
         success: true,
         message: 'Subscription received (email service not configured)'
@@ -42,9 +29,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Send notification to your business
-    await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
-      to: 'janell@evchargepartners.com',
+    const { data, error } = await resend.emails.send({
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
+      to: ['janell@evchargepartners.com'],
       subject: 'New Blog Subscription',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -60,10 +47,18 @@ export async function POST(request: NextRequest) {
       `,
     })
 
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json(
+        { error: 'Failed to process subscription' },
+        { status: 500 }
+      )
+    }
+
     // Send welcome email to subscriber
-    await transporter.sendMail({
-      from: 'janell@evchargepartners.com',
-      to: email,
+    await resend.emails.send({
+      from: 'EV Charge Partners <janell@evchargepartners.com>',
+      to: [email],
       subject: 'Welcome to EV Charge Partners Blog!',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -106,4 +101,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+} 
