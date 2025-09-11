@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
 // Create transporter for Gmail SMTP (using your Gmail account)
-const createTransporter = () => {
+const createTransport = () => {
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
     return null
   }
   
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER, // Your Gmail address
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if Gmail SMTP is configured
-    const transporter = createTransporter()
+    const transporter = createTransport()
     if (!transporter) {
       console.log('Gmail SMTP not configured. Subscription logged:', email)
       return NextResponse.json({ 
