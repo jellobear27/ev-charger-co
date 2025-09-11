@@ -223,7 +223,7 @@ export default function Blog() {
                 
                 <div className="border-t border-gray-200 mt-6 pt-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe</h3>
-                  <p className="text-gray-600 mb-4">Get the latest EV charging insights delivered to your inbox.</p>
+                  <p className="text-gray-800 mb-4">Get the latest EV charging insights delivered to your inbox.</p>
                   <form onSubmit={handleSubscribe} className="space-y-3">
                     <input
                       type="email"
