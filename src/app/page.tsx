@@ -54,6 +54,7 @@ export default function Home() {
                 <div className="hidden sm:flex space-x-4">
                   <Link href="/" className="text-white hover:text-green-400 transition-colors">Home</Link>
                   <Link href="/about" className="text-white hover:text-green-400 transition-colors">About</Link>
+                  <Link href="/blog" className="text-white hover:text-green-400 transition-colors">Blog</Link>
                   <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
                 </div>
                 {/* Mobile menu button */}
