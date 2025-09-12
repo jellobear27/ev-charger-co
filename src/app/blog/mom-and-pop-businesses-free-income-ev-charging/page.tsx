@@ -25,14 +25,14 @@ export default function MomAndPopEVChargingPage() {
           <div className="text-center text-white">
             <div className="mb-4">
               <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
-                Business Opportunity
+                Small Business Strategy
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Are You a Mom & Pop Business Looking to Make Free Extra Income?
+              Mom & Pop Businesses: Your Path to Free Extra Income
             </h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Generate FREE foot traffic while earning passive income with EV charging. Perfect for churches, coffee shops, shopping malls and restaurants.
+              How small family businesses are generating $500-2,000+ monthly in passive income with EV charging stations—without any upfront costs.
             </p>
             <div className="flex items-center justify-center mt-6 text-green-200">
               <span>February 5, 2024</span>
@@ -56,146 +56,194 @@ export default function MomAndPopEVChargingPage() {
               className="rounded-xl w-full max-w-md mx-auto"
             />
           </div>
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              If you're a small business owner in California, we have an incredible opportunity that could transform your parking lot into a revenue-generating asset—without any upfront costs or hassle on your part.
-            </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The EV Revolution is Here, and Your Business Can Profit</h2>
-            
-            <p className="text-gray-700 mb-6">
-              California is leading the charge in the electric vehicle revolution. With over 1.2 million EVs on California roads and growing by 50,000+ each quarter, EV drivers desperately need convenient charging locations. This creates a massive opportunity for smart business owners like you.
-            </p>
+          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            If you're a small business owner in California, we have an incredible opportunity that could transform your parking lot into a revenue-generating asset—without any upfront costs or hassle on your part.
+          </p>
 
-            <div className="bg-green-50 border-l-4 border-green-400 p-6 my-8 rounded-r-lg">
-              <h3 className="text-lg font-semibold text-green-800 mb-3">What's In It For You?</h3>
-              <ul className="text-green-700 space-y-2">
-                <li>✅ <strong>Earn 10% commission</strong> on every charging session</li>
-                <li>✅ <strong>$0 upfront investment</strong> - we handle everything</li>
-                <li>✅ <strong>FREE installation and maintenance</strong></li>
-                <li>✅ <strong>Increased foot traffic</strong> - customers spend 30-45 minutes charging</li>
-                <li>✅ <strong>Attract eco-conscious customers</strong> who tend to spend more</li>
-              </ul>
-            </div>
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The EV Revolution is Here, and Your Business Can Profit</h2>
+          
+          <p className="text-gray-700 mb-6">
+            California is leading the charge in the electric vehicle revolution. With over 1.2 million EVs on California roads and growing by 50,000+ each quarter, EV drivers desperately need convenient charging locations. This creates a massive opportunity for smart business owners like you.
+          </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Perfect Business Types for EV Charging Partnerships</h2>
-            
-            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">☕ Coffee Shops & Cafes</h3>
-            <p className="text-gray-700 mb-6">
-              Perfect match! EV charging takes 30-45 minutes—exactly the time customers want to relax with coffee, work on laptops, or grab a meal. Coffee shops with charging stations see 25-40% increases in daily revenue.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">🍕 Restaurants (Especially Fast-Casual)</h3>
-            <p className="text-gray-700 mb-6">
-              Turn your parking lot into a competitive advantage. While customers' cars charge, they're dining at your restaurant instead of your competitor down the street. Family restaurants and fast-casual spots see the biggest boost.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">⛪ Churches & Community Centers</h3>
-            <p className="text-gray-700 mb-6">
-              Generate additional income for your ministry or community programs. Church parking lots are often underutilized during weekdays, making them perfect for commuter charging. Earn passive income while serving your community.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">🛍️ Shopping Centers & Strip Malls</h3>
-            <p className="text-gray-700 mb-6">
-              Keep shoppers on your property longer. EV drivers will browse more stores, grab food, and make impulse purchases while their car charges. Property managers love the increased dwell time and tenant satisfaction.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">🏪 Grocery Stores & Pharmacies</h3>
-            <p className="text-gray-700 mb-6">
-              Perfect for weekly charging routines. Customers will choose your location over competitors because they can charge while shopping. Creates customer loyalty and increases average transaction sizes.
-            </p>
-
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-6 my-8 rounded-r-lg">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">Real Success Story</h3>
-              <p className="text-blue-700 italic mb-3">
-                "Installing EV chargers at our family restaurant was the best business decision we've made in years. We went from serving mostly local customers to attracting EV drivers from across the region. Our lunch revenue increased by 35% in just 6 months, and we're earning an extra $800-1,200 monthly from charging commissions alone." 
-              </p>
-              <p className="text-blue-600 font-semibold">- Maria Rodriguez, Casa Rodriguez Family Restaurant, San Jose</p>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Partner with EV Charge Partners?</h2>
-            
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-3">🔧 Complete Turnkey Solution</h4>
-                <p className="text-gray-700">We handle permits, installation, maintenance, customer service, and billing. You just collect checks.</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-3">📱 Smart Technology</h4>
-                <p className="text-gray-700">Our chargers include mobile apps, contactless payment, and real-time monitoring for maximum reliability.</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-3">🎯 Strategic Placement</h4>
-                <p className="text-gray-700">We analyze traffic patterns and customer behavior to optimize charger placement for maximum usage and revenue.</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-3">🤝 Local Partnership</h4>
-                <p className="text-gray-700">We're California-based and understand local businesses. You'll have a dedicated account manager who cares about your success.</p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Getting Started is Simple</h2>
-            
-            <div className="bg-green-50 p-8 rounded-lg my-8">
-              <h3 className="font-semibold text-green-800 mb-6 text-xl">3-Step Process:</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</span>
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">Apply Online (5 minutes)</h4>
-                    <p className="text-green-700">Quick 5-minute application with basic business info</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</span>
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">Site Assessment (Free)</h4>
-                    <p className="text-green-700">We visit your location to design the perfect setup</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</span>
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">Installation & Launch</h4>
-                    <p className="text-green-700">Professional installation and you start earning immediately</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions</h2>
-            
-            <div className="space-y-6 my-8">
-              <div className="border-l-4 border-gray-200 pl-6">
-                <h4 className="font-semibold text-gray-900 mb-2">Do I need to pay anything upfront?</h4>
-                <p className="text-gray-700">Absolutely not. We cover all costs including permits, installation, equipment, and ongoing maintenance.</p>
-              </div>
-              <div className="border-l-4 border-gray-200 pl-6">
-                <h4 className="font-semibold text-gray-900 mb-2">How much space do I need?</h4>
-                <p className="text-gray-700">Just 2-4 standard parking spaces. We work with your existing layout to minimize impact on customer parking.</p>
-              </div>
-              <div className="border-l-4 border-gray-200 pl-6">
-                <h4 className="font-semibold text-gray-900 mb-2">What if the chargers break down?</h4>
-                <p className="text-gray-700">We provide 24/7 monitoring and maintenance. Any issues are resolved quickly at no cost to you.</p>
-              </div>
-              <div className="border-l-4 border-gray-200 pl-6">
-                <h4 className="font-semibold text-gray-900 mb-2">How much can I earn?</h4>
-                <p className="text-gray-700">Most partners earn $500-2,000+ monthly depending on location and usage. High-traffic locations can earn even more.</p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg text-center my-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to Start Earning Passive Income?</h2>
-              <p className="text-xl mb-6">Join hundreds of California businesses already profiting from the EV revolution</p>
-              <Link href="/apply" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
-                Apply Now - It's Free!
-              </Link>
-              <p className="text-sm mt-4 opacity-90">Application takes less than 5 minutes • No obligation</p>
-            </div>
-
-            <p className="text-gray-600 italic text-center text-lg">
-              The EV revolution is happening now. California businesses that act quickly will secure the best partnerships and highest-traffic locations. Don't wait—your competitors won't.
+          <div className="bg-green-50 border-l-4 border-green-400 p-6 my-8 rounded-r-lg">
+            <h3 className="text-lg font-semibold text-green-800 mb-3">The Perfect Partnership</h3>
+            <p className="text-green-700">
+              We handle everything—installation, maintenance, customer service, and billing. You simply provide parking spaces and collect 10% commission on every charge. It's that simple.
             </p>
           </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Types of Businesses Perfect for EV Charging</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 my-8">
+            <div className="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">☕ Coffee Shops & Cafes</h3>
+              <p className="text-gray-700 mb-2">Perfect timing alignment—EV charging takes 30-45 minutes, perfect for coffee and work.</p>
+              <p className="text-green-600 font-semibold">Average boost: $800-1,500/month</p>
+            </div>
+            
+            <div className="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">🍕 Restaurants</h3>
+              <p className="text-gray-700 mb-2">Customers dine while their car charges—no rushing, higher average tickets.</p>
+              <p className="text-green-600 font-semibold">Average boost: $600-1,200/month</p>
+            </div>
+            
+            <div className="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">🛒 Retail Stores</h3>
+              <p className="text-gray-700 mb-2">Extended shopping time leads to higher sales and customer satisfaction.</p>
+              <p className="text-green-600 font-semibold">Average boost: $500-1,000/month</p>
+            </div>
+            
+            <div className="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">⛪ Churches</h3>
+              <p className="text-gray-700 mb-2">Weekday charging generates income while serving your community.</p>
+              <p className="text-green-600 font-semibold">Average boost: $400-800/month</p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Real Success Stories</h2>
+          
+          <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg my-8">
+            <h3 className="text-lg font-semibold text-blue-800 mb-3">Maria's Family Restaurant, San Jose</h3>
+            <p className="text-blue-700 mb-3">
+              "We installed 2 charging stations in our parking lot 6 months ago. Not only do we earn $650 in monthly commission, but our dinner revenue has increased 30% because customers stay longer and order more while their cars charge. It's been a complete game-changer for our family business."
+            </p>
+            <p className="text-blue-600 font-semibold">Monthly benefit: $650 commission + $800 increased food sales = $1,450 total</p>
+          </div>
+
+          <div className="bg-green-50 border border-green-200 p-6 rounded-lg my-8">
+            <h3 className="text-lg font-semibold text-green-800 mb-3">Tom's Auto Repair, Sacramento</h3>
+            <p className="text-green-700 mb-3">
+              "I was skeptical at first, but this has been the easiest money I've ever made. EV owners charge while getting their cars serviced, and many become regular customers. The charging station basically pays for itself while bringing in new business."
+            </p>
+            <p className="text-green-600 font-semibold">Monthly benefit: $920 commission + new customers = $1,200+ total value</p>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Why This is Perfect for Small Businesses</h2>
+          
+          <div className="space-y-6 my-8">
+            <div className="flex items-start">
+              <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Zero Upfront Investment</h3>
+                <p className="text-gray-700">We handle all equipment, installation, and ongoing maintenance costs.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start">
+              <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Passive Income Stream</h3>
+                <p className="text-gray-700">Earn 10% commission on every charge—money comes in 24/7 with no effort from you.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start">
+              <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Attract Premium Customers</h3>
+                <p className="text-gray-700">EV drivers typically have higher incomes and spend more per visit.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start">
+              <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Competitive Advantage</h3>
+                <p className="text-gray-700">Be the only business in your area with charging—customers will choose you over competitors.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Numbers That Matter</h2>
+          
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8 rounded-r-lg">
+            <h3 className="text-lg font-semibold text-yellow-800 mb-3">Average Small Business Benefits:</h3>
+            <ul className="text-yellow-700 space-y-2">
+              <li>💰 <strong>$500-2,000+ monthly commission</strong> (based on location traffic)</li>
+              <li>📈 <strong>25-40% increase</strong> in customer dwell time</li>
+              <li>🎯 <strong>30% of EV drivers</strong> become repeat customers</li>
+              <li>💳 <strong>$15-25 higher</strong> average spending per visit</li>
+              <li>⭐ <strong>Improved reputation</strong> as environmentally conscious business</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Simple Requirements</h2>
+          
+          <p className="text-gray-700 mb-6">Most small businesses already qualify:</p>
+          
+          <ul className="text-gray-700 space-y-2 ml-6 mb-8">
+            <li>• 4+ parking spaces available for charging stations</li>
+            <li>• Located in California (where the demand is highest)</li>
+            <li>• Valid business license and insurance</li>
+            <li>• Adequate electrical capacity (we assess this for free)</li>
+            <li>• Business open to public during normal hours</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">How It Works</h2>
+          
+          <div className="bg-gray-50 p-8 rounded-lg my-8">
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Quick Application (5 minutes)</h3>
+                  <p className="text-gray-700">Tell us about your business and available parking spaces.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Free Site Assessment</h3>
+                  <p className="text-gray-700">We visit your location to plan optimal charger placement and electrical needs.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Professional Installation</h3>
+                  <p className="text-gray-700">Our certified technicians handle everything—you don't lift a finger.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">4</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Start Earning</h3>
+                  <p className="text-gray-700">Customers start charging, you start earning. Monthly commission checks begin immediately.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Don't Wait—The Early Bird Gets the Worm</h2>
+          
+          <p className="text-gray-700 mb-6">
+            The small businesses that partner with us now will lock in the best territories before their competitors catch on. We're only working with one business per geographic area to ensure you don't compete directly with other charging locations.
+          </p>
+
+          <div className="bg-red-50 border-l-4 border-red-400 p-6 my-8 rounded-r-lg">
+            <h3 className="text-lg font-semibold text-red-800 mb-3">⚠️ Limited Opportunity</h3>
+            <p className="text-red-700">
+              We're only accepting 50 new partners in California this quarter. Once we reach capacity, there will be a waiting list. The businesses that apply first get priority placement in the highest-traffic areas.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg text-center my-12">
+            <h2 className="text-3xl font-bold mb-4">Ready to Add a New Revenue Stream?</h2>
+            <p className="text-xl mb-6">Join the smart small business owners already earning with EV charging</p>
+            <Link href="/apply" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
+              Apply for Partnership
+            </Link>
+            <p className="text-sm mt-4 opacity-90">Free application • No upfront costs • Start earning in 30-60 days</p>
+          </div>
+
+          <p className="text-gray-600 italic text-center text-lg">
+            The mom and pop businesses that embrace this opportunity today will be the market leaders tomorrow. Don't let the big corporations beat you to it.
+          </p>
         </div>
       </div>
     </div>
