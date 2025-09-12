@@ -43,20 +43,19 @@ export default function MomAndPopEVChargingPage() {
         </div>
       </div>
 
-      {/* Featured Image */}
-      <div className="relative h-96 bg-white">
-        <Image
-          src="/mompop.jpeg"
-          alt="Small business owner with EV charging station"
-          fill
-          className="object-cover"
-        />
-      </div>
-
       {/* Article Content */}
-      <article className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="prose prose-lg prose-green max-w-none">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="prose prose-lg max-w-none text-gray-900">
+          {/* Featured Image */}
+          <div className="mb-8">
+            <Image
+              src="/mompop.jpeg"
+              alt="Small business owner with EV charging station"
+              width={600}
+              height={800}
+              className="rounded-xl w-full max-w-md mx-auto"
+            />
+          </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               If you're a small business owner in California, we have an incredible opportunity that could transform your parking lot into a revenue-generating asset—without any upfront costs or hassle on your part.
             </p>
@@ -198,7 +197,7 @@ export default function MomAndPopEVChargingPage() {
             </p>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   )
 }
