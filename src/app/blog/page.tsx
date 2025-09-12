@@ -57,7 +57,7 @@ const blogPosts = [
     category: "Restaurant Strategy",
     date: "2024-02-08",
     readTime: "7 min read",
-    image: "/ev-charging-business.jpg",
+    image: "/coffee.jpeg",
     slug: "coffee-shops-restaurants-ev-charging-goldmine",
     featured: true
   }
