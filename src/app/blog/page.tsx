@@ -46,7 +46,7 @@ const blogPosts = [
     category: "Business Opportunity",
     date: "2024-02-05",
     readTime: "6 min read",
-    image: "/green-business-ev.jpg",
+    image: "/mompop.jpeg",
     slug: "mom-and-pop-businesses-free-income-ev-charging",
     featured: true
   },
