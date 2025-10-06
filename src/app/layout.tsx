@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'A8bMjSm3h0EON78BvgbGUu5oiNSE43vqDA12L237mt0',
+  },
 };
 
 export default function RootLayout({
@@ -54,9 +57,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="A8bMjSm3h0EON78BvgbGUu5oiNSE43vqDA12L237mt0" />
-      </head>
       <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
         {children}
         <Footer />
