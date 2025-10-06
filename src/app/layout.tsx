@@ -54,6 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="A8bMjSm3h0EON78BvgbGUu5oiNSE43vqDA12L237mt0" />
+      </head>
       <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
         {children}
         <Footer />
