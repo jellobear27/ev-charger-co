@@ -46,28 +46,28 @@ export default function MomAndPopEVChargingPage() {
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none text-gray-900">
-          {/* Featured Image */}
+      {/* Featured Image */}
           <div className="mb-8">
-            <Image
-              src="/mompop.jpeg"
-              alt="Small business owner with EV charging station"
+        <Image
+          src="/mompop.jpeg"
+          alt="Small business owner with EV charging station"
               width={600}
               height={800}
               className="rounded-xl w-full max-w-md mx-auto"
-            />
-          </div>
+        />
+      </div>
 
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            If you're a small business owner in California, we have an incredible opportunity that could transform your parking lot into a revenue-generating asset—without any upfront costs or hassle on your part.
-          </p>
+            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              If you're a small business owner in California, we have an incredible opportunity that could transform your parking lot into a revenue-generating asset—without any upfront costs or hassle on your part.
+            </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The EV Revolution is Here, and Your Business Can Profit</h2>
-          
-          <p className="text-gray-700 mb-6">
-            California is leading the charge in the electric vehicle revolution. With over 1.2 million EVs on California roads and growing by 50,000+ each quarter, EV drivers desperately need convenient charging locations. This creates a massive opportunity for smart business owners like you.
-          </p>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The EV Revolution is Here, and Your Business Can Profit</h2>
+            
+            <p className="text-gray-700 mb-6">
+              California is leading the charge in the electric vehicle revolution. With over 1.2 million EVs on California roads and growing by 50,000+ each quarter, EV drivers desperately need convenient charging locations. This creates a massive opportunity for smart business owners like you.
+            </p>
 
-          <div className="bg-green-50 border-l-4 border-green-400 p-6 my-8 rounded-r-lg">
+            <div className="bg-green-50 border-l-4 border-green-400 p-6 my-8 rounded-r-lg">
             <h3 className="text-lg font-semibold text-green-800 mb-3">The Perfect Partnership</h3>
             <p className="text-green-700">
               We handle everything—installation, maintenance, customer service, and billing. You simply provide parking spaces and collect 10% commission on every charge. It's that simple.
@@ -82,7 +82,7 @@ export default function MomAndPopEVChargingPage() {
               <p className="text-gray-700 mb-2">Perfect timing alignment—EV charging takes 30-45 minutes, perfect for coffee and work.</p>
               <p className="text-green-600 font-semibold">Average boost: $800-1,500/month</p>
             </div>
-            
+
             <div className="bg-white border border-gray-200 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">🍕 Restaurants</h3>
               <p className="text-gray-700 mb-2">Customers dine while their car charges—no rushing, higher average tickets.</p>
@@ -130,7 +130,7 @@ export default function MomAndPopEVChargingPage() {
                 <p className="text-gray-700">We handle all equipment, installation, and ongoing maintenance costs.</p>
               </div>
             </div>
-            
+
             <div className="flex items-start">
               <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
               <div>
@@ -145,7 +145,7 @@ export default function MomAndPopEVChargingPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Attract Premium Customers</h3>
                 <p className="text-gray-700">EV drivers typically have higher incomes and spend more per visit.</p>
               </div>
-            </div>
+              </div>
             
             <div className="flex items-start">
               <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">✓</span>
@@ -157,7 +157,7 @@ export default function MomAndPopEVChargingPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Numbers That Matter</h2>
-          
+            
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8 rounded-r-lg">
             <h3 className="text-lg font-semibold text-yellow-800 mb-3">Average Small Business Benefits:</h3>
             <ul className="text-yellow-700 space-y-2">
@@ -184,37 +184,37 @@ export default function MomAndPopEVChargingPage() {
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">How It Works</h2>
           
           <div className="bg-gray-50 p-8 rounded-lg my-8">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</span>
-                <div>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</span>
+                  <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Quick Application (5 minutes)</h3>
                   <p className="text-gray-700">Tell us about your business and available parking spaces.</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</span>
-                <div>
+                <div className="flex items-start">
+                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</span>
+                  <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Free Site Assessment</h3>
                   <p className="text-gray-700">We visit your location to plan optimal charger placement and electrical needs.</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</span>
-                <div>
+                <div className="flex items-start">
+                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</span>
+                  <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Professional Installation</h3>
                   <p className="text-gray-700">Our certified technicians handle everything—you don't lift a finger.</p>
-                </div>
               </div>
-              
+            </div>
+
               <div className="flex items-start">
                 <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">4</span>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Start Earning</h3>
                   <p className="text-gray-700">Customers start charging, you start earning. Monthly commission checks begin immediately.</p>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -230,22 +230,22 @@ export default function MomAndPopEVChargingPage() {
             <p className="text-red-700">
               We're only accepting 50 new partners in California this quarter. Once we reach capacity, there will be a waiting list. The businesses that apply first get priority placement in the highest-traffic areas.
             </p>
-          </div>
+            </div>
 
-          <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg text-center my-12">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg text-center my-12">
             <h2 className="text-3xl font-bold mb-4">Ready to Add a New Revenue Stream?</h2>
             <p className="text-xl mb-6">Join the smart small business owners already earning with EV charging</p>
-            <Link href="/apply" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
+              <Link href="/apply" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
               Apply for Partnership
-            </Link>
+              </Link>
             <p className="text-sm mt-4 opacity-90">Free application • No upfront costs • Start earning in 30-60 days</p>
-          </div>
+            </div>
 
-          <p className="text-gray-600 italic text-center text-lg">
+            <p className="text-gray-600 italic text-center text-lg">
             The mom and pop businesses that embrace this opportunity today will be the market leaders tomorrow. Don't let the big corporations beat you to it.
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
     </div>
   )
 }

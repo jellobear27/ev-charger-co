@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
             </ul>
           </div>
           
-          <p>If you have any questions in the meantime, please don't hesitate to reach out to us at <a href="mailto:janell@evchargepartners.com">janell@evchargepartners.com</a> or call us at (555) 123-4567.</p>
+          <p>If you have any questions in the meantime, please don't hesitate to reach out to us at <a href="mailto:janell@evchargepartners.com">janell@evchargepartners.com</a> or call us at (213) 441-8310.</p>
           
           <p>Best regards,<br>
           The EV Charge Partners Team</p>
