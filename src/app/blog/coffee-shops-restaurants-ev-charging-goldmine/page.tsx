@@ -45,17 +45,18 @@ export default function CoffeeShopsRestaurantsEVPage() {
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Featured Image */}
+        <div className="mb-8">
+          <Image
+            src="/coffee.jpeg"
+            alt="Coffee shop with EV charging station"
+            width={600}
+            height={800}
+            className="rounded-xl w-full max-w-md mx-auto"
+          />
+        </div>
+        
         <div className="prose prose-lg max-w-none text-gray-900">
-      {/* Featured Image */}
-          <div className="mb-8">
-        <Image
-          src="/coffee.jpeg"
-          alt="Coffee shop with EV charging station"
-              width={600}
-              height={800}
-              className="rounded-xl w-full max-w-md mx-auto"
-        />
-      </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               If you own a coffee shop, restaurant, or any food service business in California, you're sitting on an untapped goldmine. EV charging partnerships are transforming how food businesses attract customers and generate revenue—and the timing has never been better.
             </p>
