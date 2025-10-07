@@ -72,7 +72,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Text Content */}
               <div className="text-white text-center lg:text-left">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-gelasio">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-gelasio animate-slideInLeft">
                   <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.8)] font-extrabold">California</span> Businesses: Get <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.8)] font-extrabold">Free</span> EV Fast Chargers Installed — No Cost to You
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg font-montserrat">

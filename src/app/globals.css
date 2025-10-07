@@ -158,6 +158,13 @@ body {
     opacity: 0;
     transform: translateX(-100px);
   }
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -189,7 +196,7 @@ body {
 }
 
 .animate-slideInLeft {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .animate-fadeIn {
