@@ -41,9 +41,9 @@ export default function ScrollingBanner() {
   }, [spotsLeft])
 
   return (
-    <div className="bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white py-4 overflow-hidden whitespace-nowrap relative">
+    <div className="bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white py-4 overflow-hidden whitespace-nowrap relative rounded-t-3xl">
       {/* Urgency overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 animate-pulse rounded-t-3xl"></div>
       
       <div className="animate-scroll flex items-center relative z-10">
         {/* First set of messages */}
