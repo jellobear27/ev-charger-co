@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat, Gelasio } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,7 +58,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
         {children}
-        <Footer />
       </body>
     </html>
   );

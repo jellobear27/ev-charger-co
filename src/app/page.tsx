@@ -5,6 +5,7 @@ import ScarcityCounter from '@/components/ScarcityCounter'
 import MobileScarcityBanner from '@/components/MobileScarcityBanner'
 import ScrollZoomCard from '@/components/ScrollZoomCard'
 import ConfettiEffect from '@/components/ConfettiEffect'
+import Footer from '@/components/Footer'
 import Image from 'next/image'
 
 export default function Home() {
@@ -344,6 +345,9 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        {/* Footer inside container */}
+        <Footer />
       </div>
     </div>
   )
