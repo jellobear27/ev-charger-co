@@ -42,8 +42,9 @@ export async function POST(request: NextRequest) {
     // Send notification to your business (will forward to your Gmail)
     await transporter.sendMail({
       from: `"EV Charge Partners" <${process.env.GMAIL_USER}>`,
+      replyTo: email, // Reply goes to the subscriber
       to: 'janell@evchargepartners.com', // This will forward to your Gmail
-      subject: 'New Blog Subscription',
+      subject: '📧 New Blog Subscriber',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #16a34a;">New Blog Subscription</h2>

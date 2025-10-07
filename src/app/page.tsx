@@ -18,7 +18,7 @@ export default function Home() {
       <ScarcityNotification />
       
       {/* Main Content Container with Rounded Edges */}
-      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden mt-4 sm:mt-6 lg:mt-8 mx-4 sm:mx-6 lg:mx-8">
+      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden mt-0.5 sm:mt-1 lg:mt-1.5 mx-0.5 sm:mx-1 lg:mx-1.5">
         {/* Scrolling Banner */}
         <ScrollingBanner />
 
