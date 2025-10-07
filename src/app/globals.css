@@ -231,3 +231,38 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+/* Nav link spin hover effect */
+.nav-link-spin {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-link-spin:hover {
+  animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slow rotating diamond effect for "Free" */
+.rotate-diamond {
+  display: inline-block;
+  animation: rotateDiamond 6s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateDiamond {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
