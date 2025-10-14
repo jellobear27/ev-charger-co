@@ -41,19 +41,26 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Verify reCAPTCHA token
+    // Verify reCAPTCHA token (only if both token and secret key are present)
     if (recaptchaToken && process.env.RECAPTCHA_SECRET_KEY) {
-      const recaptchaResponse = await fetch(
-        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-        { method: 'POST' }
-      )
-      const recaptchaData = await recaptchaResponse.json()
-
-      if (!recaptchaData.success || recaptchaData.score < 0.5) {
-        return NextResponse.json(
-          { error: 'reCAPTCHA verification failed. Please try again.' },
-          { status: 400 }
+      try {
+        const recaptchaResponse = await fetch(
+          `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+          { method: 'POST' }
         )
+        const recaptchaData = await recaptchaResponse.json()
+
+        if (!recaptchaData.success || recaptchaData.score < 0.5) {
+          console.log('reCAPTCHA verification failed:', recaptchaData)
+          return NextResponse.json(
+            { error: 'reCAPTCHA verification failed. Please try again.' },
+            { status: 400 }
+          )
+        }
+        console.log('reCAPTCHA verified successfully, score:', recaptchaData.score)
+      } catch (recaptchaError) {
+        console.error('reCAPTCHA verification error:', recaptchaError)
+        // Continue anyway - don't block submission if reCAPTCHA service is down
       }
     }
 
@@ -157,8 +164,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Contact form error:', error)
+    console.error('Error details:', error instanceof Error ? error.message : String(error))
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     )
   }
