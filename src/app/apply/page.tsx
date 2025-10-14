@@ -2,8 +2,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MobileScarcityBanner from '@/components/MobileScarcityBanner'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 export default function Apply() {
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [formData, setFormData] = useState({
     businessName: '',
     contactName: '',
@@ -62,13 +64,26 @@ export default function Apply() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
+    // Check if reCAPTCHA is ready
+    if (!executeRecaptcha) {
+      console.log('reCAPTCHA not ready')
+      setIsSubmitting(false)
+      return
+    }
+
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha('submit_application')
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       })
 
       const result = await response.json()

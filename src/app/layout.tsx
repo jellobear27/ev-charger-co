@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat, Gelasio } from "next/font/google";
 import "./globals.css";
+import ReCaptchaProvider from '@/components/ReCaptchaProvider';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -57,7 +58,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
-        {children}
+        <ReCaptchaProvider>
+          {children}
+        </ReCaptchaProvider>
       </body>
     </html>
   );

@@ -29,7 +29,8 @@ export async function POST(request: NextRequest) {
       zipCode, 
       businessType, 
       parkingSpaces, 
-      message 
+      message,
+      recaptchaToken 
     } = body
 
     // Validate required fields
@@ -38,6 +39,22 @@ export async function POST(request: NextRequest) {
         { error: 'Missing required fields' },
         { status: 400 }
       )
+    }
+
+    // Verify reCAPTCHA token
+    if (recaptchaToken && process.env.RECAPTCHA_SECRET_KEY) {
+      const recaptchaResponse = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        { method: 'POST' }
+      )
+      const recaptchaData = await recaptchaResponse.json()
+
+      if (!recaptchaData.success || recaptchaData.score < 0.5) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA verification failed. Please try again.' },
+          { status: 400 }
+        )
+      }
     }
 
     // Check if Gmail SMTP is configured
