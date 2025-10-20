@@ -108,29 +108,38 @@ export default function Blog() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-emerald-50">
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold text-green-600">EV Charge Partner</Link>
-            <div className="space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-green-600">Home</Link>
-              <Link href="/about" className="text-gray-700 hover:text-green-600">About</Link>
-              <Link href="/blog" className="bg-green-600 text-white px-4 py-2 rounded-lg">Blog</Link>
-              <Link href="/apply" className="text-gray-700 hover:text-green-600">Apply Now</Link>
+            {/* Logo as clickable home button */}
+            <Link href="/" className="flex items-center space-x-2">
+              <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
+              <div className="hidden sm:flex items-center space-x-3">
+                <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
+                <div className="text-left">
+                  <div className="text-lg font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-montserrat leading-tight">EV CHARGE</div>
+                  <div className="text-lg font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-montserrat leading-tight text-center">PARTNERS</div>
+                </div>
+              </div>
+            </Link>
+            {/* Desktop Nav */}
+            <div className="hidden sm:flex space-x-4">
+              <Link href="/about" className="text-gray-700 hover:text-purple-600">About</Link>
+              <Link href="/blog" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg">Blog</Link>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 py-20">
+      <div className="bg-gradient-to-r from-purple-700 via-blue-700 to-emerald-700 py-20">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h1 className="text-5xl font-bold text-white mb-6 font-gelasio">
             EV Charging Insights & News
           </h1>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-emerald-100 mb-8">
             Stay ahead of the electric vehicle revolution with expert insights, industry news, and practical tips for business owners
           </p>
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 inline-block">
@@ -154,7 +163,7 @@ export default function Blog() {
                     className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {post.category}
                     </span>
                   </div>
@@ -165,13 +174,13 @@ export default function Blog() {
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-green-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-purple-600 transition-colors">
                     <Link href={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`} className="text-green-600 font-semibold hover:text-green-700">
+                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold hover:text-purple-700">
                     Read More →
                   </Link>
                 </div>
@@ -184,13 +193,11 @@ export default function Blog() {
       {/* All Articles */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-gelasio">Latest Articles</h2>
-          
-          <div className="flex md:space-x-8">
+          <div className="flex flex-col md:flex-row md:space-x-8">
             {/* Main Content */}
             <div className="flex-1">
               <div className="space-y-8">
-                {blogPosts.map((post) => (
+                {blogPosts.filter(post => !post.featured).map((post) => (
                   <article key={post.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                     <div className="md:flex">
                       <div className="md:w-1/3">
@@ -205,7 +212,7 @@ export default function Blog() {
                       </div>
                       <div className="p-6 md:w-2/3">
                         <div className="flex items-center text-sm text-gray-500 mb-3">
-                          <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">
+                          <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-semibold">
                             {post.category}
                           </span>
                           <span className="mx-2">•</span>
@@ -213,13 +220,13 @@ export default function Blog() {
                           <span className="mx-2">•</span>
                           <span>{post.readTime}</span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-green-600 transition-colors">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-purple-600 transition-colors">
                           <Link href={`/blog/${post.slug}`}>
                             {post.title}
                           </Link>
                         </h3>
                         <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                        <Link href={`/blog/${post.slug}`} className="text-green-600 font-semibold hover:text-green-700">
+                        <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold hover:text-purple-700">
                           Read More →
                         </Link>
                       </div>
@@ -238,7 +245,7 @@ export default function Blog() {
                     <Link
                       key={category}
                       href="#"
-                      className="block text-gray-600 hover:text-green-600 transition-colors"
+                      className="block text-gray-600 hover:text-purple-600 transition-colors"
                     >
                       {category}
                     </Link>
@@ -255,7 +262,7 @@ export default function Blog() {
                       value={subscribeEmail}
                       onChange={(e) => setSubscribeEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
                     <button 
                       type="submit"
@@ -263,20 +270,20 @@ export default function Blog() {
                       className={`w-full px-4 py-2 rounded-lg transition-colors ${
                         isSubscribing 
                           ? 'bg-gray-400 cursor-not-allowed' 
-                          : 'bg-green-600 hover:bg-green-700'
+                          : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700'
                       } text-white`}
                     >
                       {isSubscribing ? 'Subscribing...' : 'Subscribe'}
                     </button>
                   </form>
                   {subscribeStatus === 'success' && (
-                    <div className="mt-3 p-2 bg-green-50 border border-green-200 rounded text-green-700 text-sm">
+                    <div className="mt-3 p-2 bg-emerald-50 border border-emerald-200 rounded text-emerald-700 text-sm">
                       ✅ Successfully subscribed!
                     </div>
                   )}
                   {subscribeStatus === 'error' && (
-                    <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded text-red-700 text-sm">
-                      ❌ Subscription failed. Please try again.
+                    <div className="mt-3 p-2 bg-blue-50 border border-blue-200 rounded text-blue-700 text-sm">
+                      ⚠️ Subscription failed. Please try again.
                     </div>
                   )}
                 </div>
@@ -287,16 +294,16 @@ export default function Blog() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 py-16">
+      <div className="bg-gradient-to-r from-purple-700 via-blue-700 to-emerald-700 py-16">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Join the EV Revolution?
           </h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-emerald-100 mb-8">
             Transform your business into an EV charging destination and start earning passive income
           </p>
           <Link href="/apply">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg">
+            <button className="bg-white text-purple-700 px-8 py-4 rounded-xl text-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-2xl">
               Apply to Host a Station
             </button>
           </Link>

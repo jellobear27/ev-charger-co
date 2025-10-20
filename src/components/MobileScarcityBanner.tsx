@@ -39,20 +39,20 @@ export default function MobileScarcityBanner() {
   }, [spotsLeft])
 
   return (
-    <div className="md:hidden bg-gradient-to-r from-red-600 to-orange-600 text-white p-3 text-center">
+    <div className="md:hidden bg-gradient-to-r from-purple-700 via-blue-700 to-purple-700 text-white p-3 text-center">
       <div className="flex items-center justify-center space-x-4 text-sm">
         <div className="flex items-center space-x-1">
-          <span className="text-yellow-300 font-bold">{spotsLeft}</span>
-          <span>spots left</span>
+          <span className="text-emerald-300 font-bold">{spotsLeft}</span>
+          <span>spots available</span>
         </div>
         <div className="flex items-center space-x-1">
-          <span className="text-yellow-300 font-bold">
+          <span className="text-emerald-300 font-bold">
             {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
           </span>
-          <span>left</span>
+          <span>remaining</span>
         </div>
         <div className="flex items-center space-x-1">
-          <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+          <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
           <span>Live</span>
         </div>
       </div>

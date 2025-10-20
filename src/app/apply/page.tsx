@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MobileScarcityBanner from '@/components/MobileScarcityBanner'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import confetti from 'canvas-confetti'
+import Footer from '@/components/Footer'
 
 export default function Apply() {
   const { executeRecaptcha } = useGoogleReCaptcha()
@@ -90,6 +92,38 @@ export default function Apply() {
 
       if (response.ok) {
         setSubmitStatus('success')
+        
+        // Trigger confetti celebration! 🎉
+        const duration = 3000
+        const animationEnd = Date.now() + duration
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 }
+
+        function randomInRange(min: number, max: number) {
+          return Math.random() * (max - min) + min
+        }
+
+        const interval: NodeJS.Timeout = setInterval(function() {
+          const timeLeft = animationEnd - Date.now()
+
+          if (timeLeft <= 0) {
+            return clearInterval(interval)
+          }
+
+          const particleCount = 50 * (timeLeft / duration)
+          
+          // Shoot confetti from two sides
+          confetti({
+            ...defaults,
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+          })
+          confetti({
+            ...defaults,
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+          })
+        }, 250)
+        
         // Reset form
         setFormData({
           businessName: '',
@@ -133,7 +167,7 @@ export default function Apply() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-emerald-50">
       {/* Mobile Scarcity Banner */}
       <MobileScarcityBanner />
       
@@ -141,67 +175,79 @@ export default function Apply() {
       <nav className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 border-b border-white/20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
+            {/* Logo as clickable home button */}
+            <Link href="/" className="flex items-center space-x-3">
               <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
               <div className="hidden sm:flex items-center space-x-3">
                 <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
                 <div className="text-left">
-                  <div className="text-lg font-bold text-white font-montserrat">EV CHARGE PARTNERS</div>
-                  <div className="text-sm text-gray-200 font-poppins">of California</div>
+                  <div className="text-lg font-bold text-white font-montserrat leading-tight">EV CHARGE</div>
+                  <div className="text-lg font-bold text-white font-montserrat leading-tight text-center">PARTNERS</div>
                 </div>
               </div>
-            </div>
+            </Link>
+            {/* Desktop Nav */}
             <div className="hidden sm:flex space-x-4">
-              <Link href="/" className="text-white hover:text-green-400 transition-colors">Home</Link>
               <Link href="/about" className="text-white hover:text-green-400 transition-colors">About</Link>
-              <Link href="/apply" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Apply Now</Link>
-            </div>
-            {/* Mobile menu button */}
-            <div className="sm:hidden">
-              <Link href="/" className="text-white hover:text-green-400 transition-colors text-sm">
-                Home
-              </Link>
+              <Link href="/blog" className="text-white hover:text-green-400 transition-colors">Blog</Link>
             </div>
           </div>
         </div>
       </nav>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        {/* Urgency Banner */}
-        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-6 mb-8 text-white text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-gelasio">
-            🕒 Why Now?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div className="bg-white/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300">{spotsLeft}</div>
-              <div className="text-sm">Spots Left</div>
+        {/* Warm, Exciting Header */}
+        <div className="text-center mb-8 sm:mb-12 relative">
+          {/* Decorative elements */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-10">
+            <div className="text-9xl">🎉</div>
+          </div>
+          
+          <div className="relative z-10">
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
+                ✨ Almost There!
+              </span>
             </div>
-            <div className="bg-white/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300">180kW+</div>
-              <div className="text-sm">DC Fast Chargers</div>
-            </div>
-            <div className="bg-white/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300">Free</div>
-              <div className="text-sm">Installation</div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 font-gelasio leading-tight">
+              <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 bg-clip-text text-transparent animate-slideInLeft">
+                You're Only 1 Step Away
+              </span>
+              <span className="block text-2xl sm:text-3xl md:text-4xl mt-2 text-gray-700">
+                From Your New Income Stream! 💰
+              </span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
+              Join <span className="font-semibold text-green-600">hundreds of California business owners</span> earning extra recurring income right from their parking lots
+            </p>
+            
+            {/* Trust indicators */}
+            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <span className="text-green-500 text-xl">✓</span>
+                <span>100% Free Installation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500 text-xl">✓</span>
+                <span>No Hidden Costs</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500 text-xl">✓</span>
+                <span>Expert Support</span>
+              </div>
             </div>
           </div>
-          <p className="text-lg font-medium">
-            <span className="text-yellow-300 font-bold">We're selecting only 47 new host sites</span> 
-            <br />for our next deployment tranche — after that, this round closes
-          </p>
         </div>
 
-        <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-gelasio">
-            Check If Your Property Qualifies
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600">
-            Get 180kW+ DC fast chargers installed at your property — completely free
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+        {/* Warm, Professional Form Container */}
+        <div className="bg-gradient-to-br from-white to-green-50 rounded-3xl shadow-2xl p-6 sm:p-10 border-2 border-green-100 relative overflow-hidden">
+          {/* Decorative corner elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-200/30 to-transparent rounded-bl-full"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-emerald-200/30 to-transparent rounded-tr-full"></div>
+          
+          <div className="relative z-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
@@ -390,51 +436,57 @@ export default function Apply() {
             {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
-                <div className="text-green-800 font-semibold mb-2">✅ Application Submitted Successfully!</div>
-                <p className="text-green-700 text-sm">
-                  Thank you for your application! We've sent you a confirmation email and will be in touch within 24-48 hours.
+                <div className="text-green-800 font-bold text-xl mb-3">🎉 Congratulations! You're In! 🎉</div>
+                <p className="text-green-700 text-base leading-relaxed">
+                  <strong>Welcome to the EV Charge Partners family!</strong> We've sent a confirmation email to your inbox. 
+                  Our team will reach out within 24-48 hours to get you started on your journey to passive income!
                 </p>
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
-                <div className="text-red-800 font-semibold mb-2">❌ Submission Failed</div>
-                <p className="text-red-700 text-sm">
-                  There was an error submitting your application. Please try again or contact us directly at janell@evchargepartners.com
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+                <div className="text-blue-800 font-semibold mb-2">⚠️ We Need Your Help</div>
+                <p className="text-blue-700 text-sm">
+                  Something went wrong submitting your application. Please try again or reach out to us directly at janell@evchargepartners.com - we're here to help!
                 </p>
               </div>
             )}
 
-            <div className="text-center">
+            <div className="text-center mt-8">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold transform transition-all duration-200 shadow-lg ${
+                className={`px-10 py-4 sm:py-5 rounded-2xl text-xl sm:text-2xl font-bold transform transition-all duration-200 shadow-2xl ${
                   isSubmitting 
                     ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-red-600 hover:bg-red-700 hover:scale-105 animate-pulse'
+                    : 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 hover:scale-105 hover:shadow-green-500/50'
                 } text-white`}
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Submitting...
+                    Processing Your Application...
                   </span>
                 ) : (
-                  '🚨 SECURE MY SPOT NOW - FREE! 🚨'
+                  <>
+                    🎯 Complete My Application
+                    <span className="block text-sm font-normal mt-1">Join the EV Revolution Today!</span>
+                  </>
                 )}
               </button>
-              <p className="text-sm text-gray-500 mt-2">
-                ⚡ <span className="font-bold">Limited spots available</span> • Only {spotsLeft} spots left
+              <p className="text-sm text-gray-600 mt-4">
+                🔒 <span className="font-semibold">Your information is secure</span> • We respect your privacy
               </p>
             </div>
           </form>
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 } 
