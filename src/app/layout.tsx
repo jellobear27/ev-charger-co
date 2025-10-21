@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat, Gelasio } from "next/font/google";
 import "./globals.css";
-import ReCaptchaProvider from '@/components/ReCaptchaProvider';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -54,6 +53,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'A8bMjSm3h0EON78BvgbGUu5oiNSE43vqDA12L237mt0',
   },
+  metadataBase: new URL('https://evchargepartners.com'),
 };
 
 export default function RootLayout({
@@ -64,9 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} ${gelasio.variable} font-sans`}>
-        <ReCaptchaProvider>
-          {children}
-        </ReCaptchaProvider>
+        {children}
       </body>
     </html>
   );

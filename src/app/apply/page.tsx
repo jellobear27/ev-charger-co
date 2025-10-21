@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MobileScarcityBanner from '@/components/MobileScarcityBanner'
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import { useGoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import confetti from 'canvas-confetti'
 import Footer from '@/components/Footer'
 
-export default function Apply() {
+function ApplyForm() {
   const { executeRecaptcha } = useGoogleReCaptcha()
   const [formData, setFormData] = useState({
     businessName: '',
@@ -497,5 +497,15 @@ export default function Apply() {
       </div>
       <Footer />
     </div>
+  )
+}
+
+export default function Apply() {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
+  
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
+      <ApplyForm />
+    </GoogleReCaptchaProvider>
   )
 } 
