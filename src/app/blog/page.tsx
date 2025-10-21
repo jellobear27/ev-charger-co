@@ -193,102 +193,43 @@ export default function Blog() {
       {/* All Articles */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:space-x-8">
-            {/* Main Content */}
-            <div className="flex-1">
-              <div className="space-y-8">
-                {blogPosts.filter(post => !post.featured).map((post) => (
-                  <article key={post.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div className="md:flex">
-                      <div className="md:w-1/3">
-                        <div className="relative h-48 md:h-full">
-                          <Image
-                            src={post.image}
-                            alt={post.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="p-6 md:w-2/3">
-                        <div className="flex items-center text-sm text-gray-500 mb-3">
-                          <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-semibold">
-                            {post.category}
-                          </span>
-                          <span className="mx-2">•</span>
-                          <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                          <span className="mx-2">•</span>
-                          <span>{post.readTime}</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-purple-600 transition-colors">
-                          <Link href={`/blog/${post.slug}`}>
-                            {post.title}
-                          </Link>
-                        </h3>
-                        <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                        <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold hover:text-purple-700">
-                          Read More →
-                        </Link>
-                      </div>
+          <div className="space-y-8">
+            {blogPosts.filter(post => !post.featured).map((post) => (
+              <article key={post.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <div className="relative h-48 md:h-full">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="md:w-80">
-              <div className="bg-white rounded-xl shadow-md p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
-                <div className="space-y-2">
-                  {categories.map((category) => (
-                    <Link
-                      key={category}
-                      href="#"
-                      className="block text-gray-600 hover:text-purple-600 transition-colors"
-                    >
-                      {category}
+                  </div>
+                  <div className="p-6 md:w-2/3">
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-semibold">
+                        {post.category}
+                      </span>
+                      <span className="mx-2">•</span>
+                      <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                      <span className="mx-2">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-purple-600 transition-colors">
+                      <Link href={`/blog/${post.slug}`}>
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold hover:text-purple-700">
+                      Read More →
                     </Link>
-                  ))}
+                  </div>
                 </div>
-                
-                <div className="border-t border-gray-200 mt-6 pt-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe</h3>
-                  <p className="text-gray-800 mb-4">Get the latest EV charging insights delivered to your inbox.</p>
-                  <form onSubmit={handleSubscribe} className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      value={subscribeEmail}
-                      onChange={(e) => setSubscribeEmail(e.target.value)}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                    <button 
-                      type="submit"
-                      disabled={isSubscribing}
-                      className={`w-full px-4 py-2 rounded-lg transition-colors ${
-                        isSubscribing 
-                          ? 'bg-gray-400 cursor-not-allowed' 
-                          : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700'
-                      } text-white`}
-                    >
-                      {isSubscribing ? 'Subscribing...' : 'Subscribe'}
-                    </button>
-                  </form>
-                  {subscribeStatus === 'success' && (
-                    <div className="mt-3 p-2 bg-emerald-50 border border-emerald-200 rounded text-emerald-700 text-sm">
-                      ✅ Successfully subscribed!
-                    </div>
-                  )}
-                  {subscribeStatus === 'error' && (
-                    <div className="mt-3 p-2 bg-blue-50 border border-blue-200 rounded text-blue-700 text-sm">
-                      ⚠️ Subscription failed. Please try again.
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

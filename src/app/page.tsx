@@ -42,7 +42,8 @@ export default function Home() {
           <nav className="absolute top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
               <div className="flex justify-between items-center">
-                <div className="flex items-center space-x-3">
+                {/* Logo as clickable home button */}
+                <Link href="/" className="flex items-center space-x-3 cursor-pointer">
                   <img src="/logo-mobile.svg" alt="EV Charge Partners" className="h-8 sm:hidden" />
                   <div className="hidden sm:flex items-center space-x-3">
                     <img src="/logo.svg" alt="EV Charge Partners" className="h-10" />
@@ -51,15 +52,16 @@ export default function Home() {
                       <div className="text-sm text-gray-200 font-poppins">of California</div>
                     </div>
                   </div>
-                </div>
+                </Link>
+                {/* Desktop Nav */}
                 <div className="hidden sm:flex space-x-4">
-                  <Link href="/" className="text-white hover:text-emerald-400 transition-colors nav-link-spin">Home</Link>
                   <Link href="/about" className="text-white hover:text-emerald-400 transition-colors nav-link-spin">About</Link>
                   <Link href="/blog" className="text-white hover:text-emerald-400 transition-colors nav-link-spin">Blog</Link>
                   <Link href="/apply" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">Apply Now</Link>
                 </div>
-                {/* Mobile menu button */}
-                <div className="sm:hidden">
+                {/* Mobile Nav */}
+                <div className="sm:hidden flex items-center space-x-2">
+                  <Link href="/blog" className="text-white hover:text-emerald-400 transition-colors text-sm">Blog</Link>
                   <Link href="/apply" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:from-purple-700 hover:to-blue-700 transition-colors">
                     Apply
                   </Link>

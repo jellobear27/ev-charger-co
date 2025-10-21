@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'The Complete Guide to EV Charging for Business Owners | EV Charge Partner',
@@ -247,6 +248,9 @@ export default function CompleteGuideArticle() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 } 
