@@ -94,6 +94,15 @@ export default function Apply() {
         setSubmitStatus('success')
         
         // Trigger confetti celebration! 🎉
+        // Big initial burst from center
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          zIndex: 9999
+        })
+        
+        // Continuous celebration
         const duration = 3000
         const animationEnd = Date.now() + duration
         const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 }
