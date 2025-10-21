@@ -1,12 +1,14 @@
 import Link from 'next/link'
-import ScrollingBanner from '@/components/ScrollingBanner'
-import ScarcityNotification from '@/components/ScarcityNotification'
-import ScarcityCounter from '@/components/ScarcityCounter'
-import MobileScarcityBanner from '@/components/MobileScarcityBanner'
-import ScrollZoomCard from '@/components/ScrollZoomCard'
-import ConfettiEffect from '@/components/ConfettiEffect'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import ScrollingBanner from '@/components/ScrollingBanner'
+import MobileScarcityBanner from '@/components/MobileScarcityBanner'
+import Footer from '@/components/Footer'
+
+// Lazy load client-side only components
+const ScarcityNotification = dynamic(() => import('@/components/ScarcityNotification'))
+const ScrollZoomCard = dynamic(() => import('@/components/ScrollZoomCard'))
+const ConfettiEffect = dynamic(() => import('@/components/ConfettiEffect'))
 
 export default function Home() {
 

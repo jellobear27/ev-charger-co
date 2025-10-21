@@ -5,20 +5,26 @@ import ReCaptchaProvider from '@/components/ReCaptchaProvider';
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-poppins",
+  display: 'swap',
+  preload: true,
 });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
   variable: "--font-montserrat",
+  display: 'swap',
+  preload: true,
 });
 
 const gelasio = Gelasio({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   variable: "--font-gelasio",
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
