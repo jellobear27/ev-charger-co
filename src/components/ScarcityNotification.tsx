@@ -19,12 +19,12 @@ export default function ScarcityNotification() {
   ]
 
   const notificationMessages = [
-    'just applied for free EV charger installation!',
-    'qualified for $0 setup - installation scheduled!',
-    'secured their spot - only a few remaining!',
-    'got approved for free installation!',
-    'joined the program - spots filling fast!',
-    'qualified for zero-cost EV charging!'
+    'just applied for free EV charger installation',
+    'qualified for $0 setup cost',
+    'joined the program',
+    'exploring EV charging opportunities',
+    'scheduled consultation call',
+    'qualified for free installation'
   ]
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function ScarcityNotification() {
       setIsVisible(true)
     }, 3000)
 
-    // Add new notifications every 8-15 seconds
+    // Add new notifications every 12-18 seconds (less aggressive)
     const notificationTimer = setInterval(() => {
       const newNotification: Notification = {
         id: Date.now(),
@@ -50,7 +50,7 @@ export default function ScarcityNotification() {
         const updated = [newNotification, ...prev.slice(0, 4)] // Keep only 5 notifications
         return updated
       })
-    }, Math.random() * 7000 + 8000) // Random interval between 8-15 seconds
+    }, Math.random() * 6000 + 12000) // Random interval between 12-18 seconds
 
     return () => {
       clearTimeout(showTimer)
@@ -62,11 +62,11 @@ export default function ScarcityNotification() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-xs hidden md:block">
-      <div className="bg-white rounded-lg shadow-2xl border-l-4 border-green-500 p-3 animate-slideIn">
+      <div className="bg-white rounded-lg shadow-2xl border-l-4 border-blue-500 p-3 animate-slideIn">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center">
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse mr-1"></div>
-            <span className="text-xs font-semibold text-gray-800">Live Updates</span>
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse mr-1"></div>
+            <span className="text-xs font-semibold text-gray-800">Recent Activity</span>
           </div>
           <button 
             onClick={() => setIsVisible(false)}
@@ -80,7 +80,7 @@ export default function ScarcityNotification() {
           {notifications.map((notification) => (
             <div key={notification.id} className="text-xs animate-fadeIn">
               <div className="flex items-center space-x-1">
-                <div className="w-1 h-1 bg-green-500 rounded-full"></div>
+                <div className="w-1 h-1 bg-blue-500 rounded-full"></div>
                 <span className="text-gray-600">
                   <span className="font-medium text-gray-800">{notification.location}</span>
                   {' '}{notification.message}
@@ -93,7 +93,7 @@ export default function ScarcityNotification() {
         
         <div className="mt-2 pt-1 border-t border-gray-100">
           <div className="text-xs text-gray-500">
-            ⚡ <span className="font-medium text-green-600">47 spots</span> left
+            ⚡ <span className="font-medium text-blue-600">Accepting applications</span> statewide
           </div>
         </div>
       </div>

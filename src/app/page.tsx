@@ -59,13 +59,13 @@ export default function Home() {
                 <div className="hidden sm:flex space-x-4">
                   <Link href="/about" className="text-white hover:text-emerald-400 transition-colors nav-link-spin">About</Link>
                   <Link href="/blog" className="text-white hover:text-emerald-400 transition-colors nav-link-spin">Blog</Link>
-                  <Link href="/apply" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">Apply Now</Link>
+                  <Link href="/apply" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">Submit Form</Link>
                 </div>
                 {/* Mobile Nav */}
                 <div className="sm:hidden flex items-center space-x-2">
                   <Link href="/blog" className="text-white hover:text-emerald-400 transition-colors text-sm">Blog</Link>
                   <Link href="/apply" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:from-purple-700 hover:to-blue-700 transition-colors">
-                    Apply
+                    Submit
                   </Link>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Home() {
               {/* Text Content */}
               <div className="text-white text-center lg:text-left">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-gelasio animate-slideInLeft">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold">California</span> Businesses: Get <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold rotate-diamond">Free</span> EV Fast Chargers Installed — No Cost to You
+                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold">California:</span> Ignite your Parking Lots Through Your Trusted high-power charging network <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold rotate-diamond">FOR FREE</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg font-montserrat">
                   We're rolling out our next wave of EV charger installations across California. If your property has strong foot traffic or freeway visibility, you could qualify to host high-speed chargers — <span className="text-emerald-400 font-bold font-poppins">completely free</span>.
@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link href="/apply">
                     <button className="bg-gradient-to-r from-purple-600 via-blue-600 to-emerald-600 hover:from-purple-700 hover:via-blue-700 hover:to-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button">
-                      ✨ START YOUR APPLICATION ✨
+                      Lot Space Submission Form
                     </button>
                   </Link>
                   <Link href="/about">
@@ -215,7 +215,7 @@ export default function Home() {
                 </p>
                 <Link href="/apply">
                   <button className="bg-white text-purple-700 px-8 py-4 rounded-xl text-xl font-bold shadow-2xl font-poppins transform hover:scale-105 transition-all duration-300 hover:shadow-purple-500/50">
-                    🎯 Start Your Application Today
+                    Lot Space Submission Form
                   </button>
                 </Link>
               </div>
@@ -295,7 +295,7 @@ export default function Home() {
                 ✨ Your Opportunity Awaits
               </h2>
               <p className="text-lg sm:text-xl text-emerald-200 mb-6 font-poppins">
-                We're welcoming <span className="font-bold">47 new host partners</span> to join California's clean energy future
+                Join California business owners who are <span className="font-bold">powering the future</span> of clean energy transportation
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="bg-white/20 rounded-lg p-4">
@@ -307,8 +307,8 @@ export default function Home() {
                   <div className="text-sm text-white">Chargers Per Site</div>
                 </div>
                 <div className="bg-white/20 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-emerald-300">47</div>
-                  <div className="text-sm text-white">Spots Available</div>
+                  <div className="text-2xl font-bold text-emerald-300">$0</div>
+                  <div className="text-sm text-white">Setup Cost</div>
                 </div>
               </div>
             </div>
@@ -320,7 +320,7 @@ export default function Home() {
               </p>
               <Link href="/apply">
                 <button className="bg-white text-purple-700 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-xl sm:text-2xl font-bold shadow-2xl font-poppins bounce-hover elastic-button transform hover:scale-105 transition-all duration-300 hover:shadow-white/50">
-                  ✨ Start Your Application
+                  Lot Space Submission Form
                 </button>
               </Link>
               <p className="text-sm text-emerald-200 mt-4">
@@ -341,7 +341,7 @@ export default function Home() {
             </p>
             <Link href="/apply">
               <button className="bg-white text-purple-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button hover:shadow-white/50 transform hover:scale-105 transition-all duration-300">
-                Apply Now — Check My Property
+                Lot Space Submission Form
               </button>
             </Link>
             <p className="text-sm text-emerald-200 mt-4">

@@ -80,8 +80,8 @@ describe('Homepage Font Integration', () => {
     const ctaHeadline = screen.getByText(/Don't Get Left Behind/)
     expect(ctaHeadline).toHaveClass('font-gelasio')
     
-    const urgencyHeadline = screen.getByText(/LIMITED TIME OFFER/)
-    expect(urgencyHeadline).toHaveClass('font-gelasio')
+    const opportunityHeadline = screen.getByText(/Your Opportunity Awaits/)
+    expect(opportunityHeadline).toHaveClass('font-gelasio')
     
     const finalCta = screen.getByText(/Ready to Start Earning/)
     expect(finalCta).toHaveClass('font-gelasio')

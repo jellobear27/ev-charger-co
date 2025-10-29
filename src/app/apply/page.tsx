@@ -22,42 +22,6 @@ function ApplyForm() {
     photoUpload: null as File | null
   })
 
-  const [spotsLeft, setSpotsLeft] = useState(47)
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 59,
-    seconds: 59
-  })
-
-  useEffect(() => {
-    // Countdown timer
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 }
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 }
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 }
-        } else {
-          return { hours: 23, minutes: 59, seconds: 59 }
-        }
-      })
-    }, 1000)
-
-    // Randomly decrease spots
-    const spotsTimer = setInterval(() => {
-      if (Math.random() < 0.1 && spotsLeft > 1) {
-        setSpotsLeft(prev => prev - 1)
-      }
-    }, 4000)
-
-    return () => {
-      clearInterval(timer)
-      clearInterval(spotsTimer)
-    }
-  }, [spotsLeft])
-
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 

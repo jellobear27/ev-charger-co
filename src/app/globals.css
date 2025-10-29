@@ -120,7 +120,7 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 12s linear infinite;
+  animation: scroll 8.4s linear infinite;
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -130,14 +130,14 @@ body {
 /* Faster animation on mobile */
 @media (max-width: 768px) {
   .animate-scroll {
-    animation: scroll 10s linear infinite;
+    animation: scroll 7s linear infinite;
   }
 }
 
 /* Even faster on small mobile */
 @media (max-width: 480px) {
   .animate-scroll {
-    animation: scroll 8s linear infinite;
+    animation: scroll 5.6s linear infinite;
   }
 }
 
