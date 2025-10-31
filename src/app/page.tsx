@@ -78,7 +78,7 @@ export default function Home() {
               {/* Text Content */}
               <div className="text-white text-center lg:text-left">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-gelasio animate-slideInLeft">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold">California:</span> Ignite your Parking Lots Through Your Trusted high-power charging network <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold rotate-diamond">FOR FREE</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold">California: business owners</span> Ignite your Parking Lots Through Your Trusted high-power charging network <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] font-extrabold rotate-diamond">FOR FREE</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-lg font-montserrat">
                   We're rolling out our next wave of EV charger installations across California. If your property has strong foot traffic or freeway visibility, you could qualify to host high-speed chargers — <span className="text-emerald-400 font-bold font-poppins">completely free</span>.
