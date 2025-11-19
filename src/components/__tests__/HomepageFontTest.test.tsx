@@ -44,7 +44,7 @@ describe('Homepage Font Integration', () => {
     render(<Home />)
     
     // Check main hero headline
-    const heroHeadline = screen.getByText(/\$0 Out-of-Pocket Install/)
+    const heroHeadline = screen.getByText(/Ignite your Parking Lots/)
     expect(heroHeadline).toHaveClass('font-gelasio')
     
     // Check section headline
@@ -55,8 +55,8 @@ describe('Homepage Font Integration', () => {
     const exponentialGrowth = screen.getByText('Exponential Growth')
     expect(exponentialGrowth).toHaveClass('font-gelasio')
     
-    const infrastructureDemand = screen.getByText('Infrastructure Demand Spike')
-    expect(infrastructureDemand).toHaveClass('font-gelasio')
+    const growingOpportunity = screen.getByText('Growing Opportunity')
+    expect(growingOpportunity).toHaveClass('font-gelasio')
     
     const consumerExpectations = screen.getByText('Consumer Expectations')
     expect(consumerExpectations).toHaveClass('font-gelasio')
@@ -66,24 +66,21 @@ describe('Homepage Font Integration', () => {
     render(<Home />)
     
     // Check that body text still uses other fonts
-    const earnText = screen.getByText(/Earn Monthly Passive Income/)
-    expect(earnText).toHaveClass('font-poppins')
+    const poppinsTexts = screen.getAllByText(/of California/)
+    expect(poppinsTexts[0]).toHaveClass('font-poppins')
     
-    const descriptionText = screen.getByText(/Boost customer traffic/)
-    expect(descriptionText).toHaveClass('font-montserrat')
+    const poppinsText = screen.getByText(/180kW\+ Fast Chargers/)
+    expect(poppinsText).toHaveClass('font-poppins')
   })
 
   it('renders CTA headlines with Gelasio font', () => {
     render(<Home />)
     
-    // Check CTA headlines
-    const ctaHeadline = screen.getByText(/Don't Get Left Behind/)
-    expect(ctaHeadline).toHaveClass('font-gelasio')
+    // Check section headlines that use Gelasio
+    const idealLocations = screen.getByText(/Ideal Locations/)
+    expect(idealLocations).toHaveClass('font-gelasio')
     
     const opportunityHeadline = screen.getByText(/Your Opportunity Awaits/)
     expect(opportunityHeadline).toHaveClass('font-gelasio')
-    
-    const finalCta = screen.getByText(/Ready to Start Earning/)
-    expect(finalCta).toHaveClass('font-gelasio')
   })
 }) 

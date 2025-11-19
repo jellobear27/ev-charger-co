@@ -330,26 +330,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-purple-700 via-blue-700 to-emerald-700 py-12 sm:py-16 lg:py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-gelasio">
-              Ready to Host High-Speed EV Chargers?
-            </h2>
-            <p className="text-lg sm:text-xl text-emerald-100 mb-6 sm:mb-8 font-poppins">
-              Get 180kW+ DC fast chargers installed at your property — completely free
-            </p>
-            <Link href="/apply">
-              <button className="bg-white text-purple-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-semibold shadow-lg font-poppins bounce-hover elastic-button hover:shadow-white/50 transform hover:scale-105 transition-all duration-300">
-                Lot Space Submission Form
-              </button>
-            </Link>
-            <p className="text-sm text-emerald-200 mt-4">
-              💚 Subject to site qualification and available grid capacity
-            </p>
-          </div>
-        </section>
-
         {/* Footer inside container */}
         <Footer />
       </div>

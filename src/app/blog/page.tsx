@@ -7,6 +7,17 @@ import { useState } from 'react'
 
 const blogPosts = [
   {
+    id: 6,
+    title: "EV Interest Surges to Record High: What This Means for California Businesses",
+    excerpt: "New J.D. Power data shows 60% of car shoppers considering EVs in 2026, with 243,000 EV leases expiring. Learn how California businesses can capitalize on this massive shift.",
+    category: "Industry News",
+    date: "2025-11-19",
+    readTime: "6 min read",
+    image: "/tesla.jpeg",
+    slug: "ev-interest-surging-2026-california-business-opportunity",
+    featured: true
+  },
+  {
     id: 1,
     title: "Range Anxiety: The Real Story Behind EV Adoption in California",
     excerpt: "Discover why range anxiety is becoming less of a concern and how California's charging infrastructure is evolving to support the EV revolution.",
@@ -65,6 +76,7 @@ const blogPosts = [
 
 const categories = [
   "All",
+  "Industry News",
   "EV Adoption",
   "Business Opportunity", 
   "Business Guide",
@@ -143,7 +155,7 @@ export default function Blog() {
             Stay ahead of the electric vehicle revolution with expert insights, industry news, and practical tips for business owners
           </p>
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 inline-block">
-            <p className="text-white font-semibold">Latest: California EV Infrastructure Expansion 2024</p>
+            <p className="text-white font-semibold">Latest: California EV Infrastructure Expansion 2025</p>
           </div>
         </div>
       </div>
